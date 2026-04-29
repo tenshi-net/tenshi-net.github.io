@@ -36,5 +36,12 @@
       <guid>http://localhost:1313/posts/posts/navigating-linux-distros---my-personal-journey/</guid>
       <description>&lt;p&gt;I, like many others, made the decision to switch to Linux for my primary PC following the &lt;a href=&#34;https://support.microsoft.com/en-us/windows/windows-10-support-ends-on-october-14-2025-2ca8b313-1946-43d3-b55c-2b95b107f281&#34;&gt;death of Windows 10&lt;/a&gt;. I already take a lot of issues with modern Windows as it is, and decided I wasn&amp;rsquo;t willing to use the privacy nightmare that is Windows 11 (excluding one of my side systems, which I&amp;rsquo;ll talk about in future posts). Plus, with my ongoing career change into IT and cybersecurity, I knew Linux was going to be a necessity so I have about three years of experience experimenting with it at this point.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;I’m Jacob, a lifelong writer turned cybersecurity professional (entry-level). Following several attempted careers, I’ve embarked on a journey of education in Information Technology with the goal of entering the Information Security industry, indulging upon long-term curiosity toward computers and digital technology. I aim to leverage my talents and my passion for technology in order to find a lifetime career. I am obsessed with learning new things; I’m the sort who will geek out over the cultivation of tea, the history of the blue LED, minute differences between Linux distros and the quirks of DOS viruses. I started this blog to discuss and document my progress in learning IT/security topics, and to showcase any projects or discuss opinions.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
