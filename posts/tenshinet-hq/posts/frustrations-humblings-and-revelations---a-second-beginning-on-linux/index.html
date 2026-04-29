@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="en-us" class="h-full">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="en-us">
+<meta name="theme-color" content="#BD5FFF">
+<script>
+  
+  (function () {
+    const storedTheme = localStorage.getItem("theme");
+    const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = storedTheme || (systemPrefersLight ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+  
+  (function(){var t=sessionStorage.getItem('mana_pt');if(t){document.documentElement.setAttribute('data-page-enter',t);sessionStorage.removeItem('mana_pt');}})();
+  
+  window.MANA_SEARCH_INDEX_URL = '\/index.json';
+  
+  window.MANA_LANG_PREFIXES = ['en'];
+</script>
+<title>Frustrations, Humblings and Revelations - A Second Beginning on Linux | TenshiNet</title>
+<meta
+  name="description"
+  content="
+    Back in August, I ran through my thought processes on picking a Linux distribution to use on my primary PC. By the end of that lengthy blog post, I had talked …
+  
+  ">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/tenshinet-hq/posts/frustrations-humblings-and-revelations---a-second-beginning-on-linux/">
+
+
+<link rel="alternate" hreflang="en-us" href="http://localhost:1313/posts/tenshinet-hq/posts/frustrations-humblings-and-revelations---a-second-beginning-on-linux/"><link rel="alternate" hreflang="x-default" href="http://localhost:1313/posts/tenshinet-hq/posts/frustrations-humblings-and-revelations---a-second-beginning-on-linux/">
+
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_us">
+<meta property="og:title" content="Frustrations, Humblings and Revelations - A Second Beginning on Linux | TenshiNet">
+<meta property="og:description" content="Back in August, I ran through my thought processes on picking a Linux distribution to use on my primary PC. By the end of that lengthy blog post, I had talked …">
+<meta property="og:url" content="http://localhost:1313/posts/tenshinet-hq/posts/frustrations-humblings-and-revelations---a-second-beginning-on-linux/">
+<meta property="og:site_name" content="TenshiNet"><meta property="article:published_time" content="2025-10-28T00:00:00Z">
+  <meta
+    property="article:modified_time"
+    content="2025-10-28T00:00:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Frustrations, Humblings and Revelations - A Second Beginning on Linux | TenshiNet">
+<meta name="twitter:description" content="Back in August, I ran through my thought processes on picking a Linux distribution to use on my primary PC. By the end of that lengthy blog post, I had talked …">
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","email":"tenshinet@proton.me","name":"TenshiNet","sameAs":["https://github.com/tenshi-net"]},"dateModified":"2025-10-28T00:00:00Z","datePublished":"2025-10-28T00:00:00Z","description":"Back in August, I ran through my thought processes on picking a Linux distribution to use on my primary PC. By the end of that lengthy blog post, I had talked …","headline":"Frustrations, Humblings and Revelations - A Second Beginning on Linux","image":"http://localhost:1313/images/transparent-logo.png","inLanguage":"en-us","mainEntityOfPage":{"@id":"http://localhost:1313/posts/tenshinet-hq/posts/frustrations-humblings-and-revelations---a-second-beginning-on-linux/","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:1313/images/transparent-logo.png"},"name":"TenshiNet","url":"http://localhost:1313/"},"timeRequired":"PT10M","url":"http://localhost:1313/posts/tenshinet-hq/posts/frustrations-humblings-and-revelations---a-second-beginning-on-linux/","wordCount":2101}</script>
+
+
+
+  
+  
+  
+    
+  
+  
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Home","position":1},{"@type":"ListItem","item":"http://localhost:1313/posts/","name":"Posts","position":2},{"@type":"ListItem","item":"http://localhost:1313/posts/tenshinet-hq/posts/frustrations-humblings-and-revelations---a-second-beginning-on-linux/","name":"Frustrations, Humblings and Revelations - A Second Beginning on Linux","position":3}]}</script>
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+  media="print"
+  onload="this.media='all'">
+<noscript>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</noscript>
+
+<link rel="stylesheet" href="/css/theme.min.29a2f04a9f41258e6c40c77a2b2be43ac8a3a9805c65165860d8b8ec5c442050.css">
+
+
+  <link
+    rel="stylesheet"
+    href="/css/syntax-dark.min.b01037e5609e6260b74d6fcdd6d5131e8dcbc4d46d6ef4bfbe5a60bdfc1a9f30.css"
+    id="syntax-dark-theme"
+    class="syntax-theme">
+  <link
+    rel="stylesheet"
+    href="/css/syntax-light.min.9602bc2fcef52b4c62e05eae14b48ba428e114f116e993e504d83ed5a3aeda98.css"
+    id="syntax-light-theme"
+    class="syntax-theme"
+    disabled><script>
+  
+  (function () {
+    const storedTheme = localStorage.getItem("theme");
+    const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = storedTheme || (systemPrefersLight ? "light" : "dark");
+
+    const syntaxDark = document.getElementById("syntax-dark-theme");
+    const syntaxLight = document.getElementById("syntax-light-theme");
+
+    if (theme === "light") {
+      if (syntaxDark) syntaxDark.disabled = true;
+      if (syntaxLight) syntaxLight.disabled = false;
+    } else {
+      if (syntaxDark) syntaxDark.disabled = false;
+      if (syntaxLight) syntaxLight.disabled = true;
+    }
+
+    
+    const observer = new MutationObserver(() => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      if (currentTheme === "light") {
+        if (syntaxDark) syntaxDark.disabled = true;
+        if (syntaxLight) syntaxLight.disabled = false;
+      } else {
+        if (syntaxDark) syntaxDark.disabled = false;
+        if (syntaxLight) syntaxLight.disabled = true;
+      }
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+  })();
+</script>
+
+
+
+
+<link rel="stylesheet" href="/css/bundle.min.57d6410f7c0fffb9ad468070f9ab22cec491cb85b9a66f072e8cce12fe18b8e0.css">
+
+
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+
+<link rel="icon" type="image/png" href="/favicon.png">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+<link rel="manifest" href="/site.webmanifest">
+
+
+
+
+  
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="/index.xml"
+      title="TenshiNet">
+  
+
+
+
+
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <a href="#main-content" class="skip-to-main" aria-label="Skip to main content"
+      >Skip to main content</a
+    >
+    <header class="sticky-header">
+      <div class="header-container">
+        <nav class="header-nav" role="navigation" aria-label="Main navigation">
+  <div class="header-content">
+    <div class="header-logo">
+      <a href="/" class="logo-link" aria-label="Home - TenshiNet">
+        TenshiNet
+      </a>
+    </div>
+
+    
+    <button 
+      id="mobile-menu-toggle" 
+      class="mobile-menu-toggle" 
+      aria-label="Toggle menu" 
+      aria-expanded="false"
+      type="button">
+      <span class="hamburger-icon">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </span>
+    </button>
+
+    <div class="header-menu">
+      <ul class="menu-list">
+  
+    <li class="menu-item">
+      <a
+        href="/"
+        class="menu-link ">
+        Home
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="/posts/"
+        class="menu-link ">
+        Posts
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="/tags/"
+        class="menu-link ">
+        Tags
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="/about/"
+        class="menu-link ">
+        About
+      </a>
+    </li>
+  
+</ul>
+
+
+      <button id="search-toggle" class="search-toggle" aria-label="Search" type="button">
+        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </button>
+
+      
+
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" type="button">
+  <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+  </svg>
+  <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+  </svg>
+</button>
+
+    </div>
+  </div>
+</nav>
+
+      </div>
+      <div class="reading-progress-bar" aria-hidden="true"></div>
+    </header>
+
+    <main id="main-content" class="flex-1" role="main">
+      
+  <div class="single-post-wrapper">
+    <article class="single-post">
+      
+
+
+
+
+
+
+
+      <header class="post-header">
+        
+
+<nav aria-label="breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+      <meta itemprop="position" content="1" />
+      <span aria-hidden="true" class="breadcrumb-sep">›</span>
+    </li>
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="/posts/" itemprop="item"><span itemprop="name">Posts</span></a>
+      <meta itemprop="position" content="2" />
+      <span aria-hidden="true" class="breadcrumb-sep">›</span>
+    </li>
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <span itemprop="name" class="breadcrumb-current">Frustrations, Humblings and Revelations - A Second Beginning on Linux</span>
+      <meta itemprop="position" content="3" />
+    </li>
+  </ol>
+</nav>
+
+
+        <h1 class="post-title-main">Frustrations, Humblings and Revelations - A Second Beginning on Linux</h1>
+
+        
+
+        <div class="post-meta">
+  <div class="post-meta-info">
+    <time datetime="2025-10-28T00:00:00Z" class="post-date">
+      <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+      </svg>
+      October 28, 2025
+    </time>
+
+    <span class="meta-separator">•</span>
+
+    
+      <span class="post-word-count">
+        <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+        2101 words
+      </span>
+    
+
+    
+      <span class="meta-separator">•</span>
+      <span class="post-reading-time">
+        <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        10 min
+      </span>
+    
+  </div>
+
+  
+</div>
+
+      </header>
+
+      <div class="post-content-main">
+        <p>Back in August, I ran through <a href="https://jacobfieldstech.wordpress.com/2025/08/29/choosing-linux-distro/">my thought processes on picking a Linux distribution</a> to use on my primary PC. By the end of that lengthy blog post, I had talked about how I was leaning toward <a href="https://manjaro.org/">Manjaro</a>, with <a href="https://fedoraproject.org/">Fedora</a> as a possible secondary option. Much of my reasoning for leaning toward Manjaro had to do with a blend of features, a middle ground on the rolling release through the Manjaro Stable branch and so forth. Well, I did decide to go for Manjaro as my primary workstation distro after all and, well… what ensued was a series of frustration after frustration that led me to some degree of discouragement and humbling. Let&rsquo;s talk about it.</p>
+<h1 id="preparation">Preparation</h1>
+<p>Part of why I let my Windows 10 system burn down to the wire was that I knew the process of migration would put me down and out for a week <strong>at best</strong>, but it&rsquo;d likely be closer to two or three weeks. This was because of the fact that, after using roughly the same file structure for my data for decades, there was always a lot of fractured data that made the risk of forgetting to back something up a very real possibility. Plus, up until now, all of my OS upgrades have coincided with major PC hardware upgrades to the point where those previous systems sat with my data for a few years after I had stopped using them, making it plausible that I could recover lost data by accessing those old systems. Not so, this time. This time, I was migrating my existing primary PC to a whole new type of operating system. And while I was confident I had learned enough about Linux to make it my daily driver at this point in time, I wasn&rsquo;t confident that I wouldn&rsquo;t accidentally forget to transfer something over.</p>
+<p>Then, there&rsquo;s the fact that I wanted to get myself a new NVMe solid state drive as, previously, my SSDs had all been SATA drives. This actually worked out to my benefit and brought some level of comfort through the issues I&rsquo;ll talk about later. A debacle where the retailer sent me the wrong drive, in the wrong size, in almost no packaging whatsoever (not even an anti-static bag) ended up pushing the migration back by a few more days.</p>
+<h1 id="starting-the-process">Starting the Process</h1>
+<p>After I got that drive issue sorted, and after I had spent multiple passes of going over my backups and all my previous drives for any possible data I might have stored in a weird spot, I took a deep breath and powered down the system. After inserting the thumb drive (I use Ventoy to test and install distros), I went into the UEFI settings, disabled secure boot, ensured my thumb drive was top of the boot order, and I powered on the system. I took a few moments in the live environment to check a few things to make sure Manjaro was a good fit for my system, but then I opened up the installer menu.</p>
+<p>The first time I ran through the installer, I chose <strong>btrfs</strong> and tried to enable full disk encryption. That first installation, unfortunately, went wrong. The decryption prompt would get stuck and the boot times were painfully slow. I decided at that point that I would just redo the whole installation process: <em>better to do that <strong>now</strong> than after I&rsquo;ve reinstalled all my applications and ported over my backups</em>, I thought.</p>
+<p>After a second installation, things definitely went better, though I&rsquo;m not entirely sure why. I did stick with btrfs because of its file integrity features and I doubted it was what was causing the problem. I would&rsquo;ve been okay with ext4 but I figured there wasn&rsquo;t much of a downside to using btrfs on a personal system.</p>
+<h1 id="getting-off-the-ground">Getting off the Ground</h1>
+<p>After I booted into the desktop following the installation, I started playing around and installing some of my basic must-have applications. From the <a href="https://brave.com/">Brave</a> browser, to <a href="https://obsidian.md/">Obsidian</a>, to <a href="https://www.strawberrymusicplayer.org/">Strawberry Music Player</a>, most of the early programs I installed were either available as native packages or as Flatpaks.</p>
+<p>That was until I discovered that my cloud syncing application, MEGAsync, was not available on either. The only way I could download it was <a href="https://aur.archlinux.org/packages/megasync">through the AUR</a>, and I had very little experience with the AUR. I had heard of stability and security issues people sometimes encounter by installing AUR packages, so this made me nervous, particularly for something as important as end-to-end encrypted cloud syncing.</p>
+<p>Fortunately, I have access to a <a href="https://mewe.com/join/linux3">Linux community over on MeWe</a>, a decent-sized group that has been able to help me figure these things out. Thanks to one of its members, I learned that the AUR is <strong>generally</strong> a good resource, you just have to put a little thought into it by looking at the Github repo, the AUR web page (particularly the PKGBUILD section) and so forth. As such, I built my first AUR package trying to get MEGAsync working… and frankly, it went over way smoother than I expected! Once I figured out how to translate my existing sync structure into something a little more universal (it was very Windows-like before), I had everything syncing the way it was before.</p>
+<p>However, it was around this time that I ran into what has been the biggest issue so far.</p>
+<h1 id="why-is-it-always-networking">Why is it always Networking?</h1>
+<p>I&rsquo;ve been in the slow process of moving to a different place because, currently, my living area is very small and doesn&rsquo;t have room for any real home lab projects. Another issue is that, for the last decade or so, I&rsquo;ve been stuck using USB adapters to connect to the internet, as I don&rsquo;t have ethernet access in this home and don&rsquo;t have permission from the homeowner to run ethernet. Until now, that may have been less than optimal, but at least it worked.</p>
+<p>The problem is that because Linux doesn&rsquo;t always have the best peripheral support, this also impacts wi-fi adapters. The one I used on Windows wasn&rsquo;t amazing, being an older Netgear adapter without an antenna, but it did easily access my 5GHz WAP and gave me reasonable speeds. The only other adapter I had on hand was a TP-Link adapter with an antenna. Fortunately, that one <strong>did</strong> work fine on Linux.</p>
+<p>As it turns out, the drivers for that other adapter (a much older adapter, I might add) weren&rsquo;t added until kernel version 6.14, and Manjaro Stable runs on 6.12 at the time of this writing, as it&rsquo;s the latest LTS kernel version.</p>
+<p>Here&rsquo;s where Manjaro saved me: <em>it makes kernel installation and switching a breeze</em>. I installed the latest kernel version, 6.17, and sure enough: that older adapter started working… until it didn&rsquo;t.</p>
+<p>See, I had also installed an AUR package that included those drivers, which evidently caused conflict, making even the other TP-Link adapter stop working. I was advised to <code>sudo dmesg</code> and look at the error messages there, but not much was given that I could troubleshoot by. I just opted for the safer option: I switched back into kernel 6.12, then uninstalled both that AUR driver package and the 6.17 kernel (for the time being). Sure enough, booting back into 6.12 caused the other adapter to work fine again.</p>
+<p>I decided to try a kernel upgrade again, reinstalling 6.17 and seeing if that, alone, would support the Netgear adapter. Once again, this worked for me&hellip; until it didn&rsquo;t.</p>
+<p>Unfortunately for me, I ran into another issue here: that adapter was always plugged into a frontal port, since it lacked an antenna and thus had next to no signal when plugged into the back of my PC, underneath an enclosed wooden desk. Because of that, I&rsquo;ve snagged that adapter more than once, which has probably led to gradual weakening of the connections within the port at the very least, and might have done the same to the adapter over time.</p>
+<p>This meant that I basically had no choice but to use that other adapter. If I did that, though, I&rsquo;d have to suffer for painfully low download speeds which would make my experience significantly worse. Once again, the MeWe Linux community was very helpful. One user who had been helping me figure things out had suggested using a USB extension cord and placing the adapter somewhere with a better signal. I decided to take that suggestion and placed an order for an extender (didn&rsquo;t have any on hand). After I experimented to figure out the best angling for the extension cord, I plugged in the TP-Link adapter.</p>
+<p>At first, that worked really well&hellip; until it didn&rsquo;t. I was getting much better download speeds but, over time, the speeds degraded massively. I decided to try to reinstall kernel 6.17 again so I could experiment with the Netgear adapter. Once again, this initially worked out very well but speeds began degrading. At that point, I decided the best option was to further experiment with the signal strength. I started up a free and open source Android app for analyzing wi-fi signal strength and, with a combo of that app and manipulation of the cable, I eventually found a spot that gave me <strong>acceptable</strong> speeds, at best. It&rsquo;s far from ideal but it&rsquo;s the best option for me at this point in time until I can move to a new place.</p>
+<h1 id="lessons-learned--final-thoughts">Lessons Learned &amp; Final Thoughts</h1>
+<p>The first thing I have to say is that this experience has been extremely <strong>humbling</strong>. I&rsquo;ve been playing with Linux for almost three years, and have been learning it professionally for about a year now. As part of that, I took an <a href="https://www.packtpub.com/en-us/product/getting-started-with-arch-linux-build-from-the-ground-up-9781806119110">Arch Linux course</a> (by Dan Mill, same author as the Ubuntu Server <a href="https://jacobfieldstech.wordpress.com/2025/10/15/learning-ubuntu-server-1/">course I&rsquo;m currently working on</a>) and judging by my successes and comprehension with that course, I figured using an Arch-based distro like Manjaro would be relatively easy to grasp. What I didn&rsquo;t expect is to feel like such a total Linux newbie.</p>
+<p>At first, this was discouraging: <em>what if all that learning I previously had undertaking was really nothing compared to what I <strong>need</strong> to know for professional Linux administration and cybersecurity?</em> But after two days of being in the thick of troubleshooting things, I&rsquo;ve realized something: yes, I definitely <strong>am</strong> still a Linux newbie, but that&rsquo;s totally fine. Using Debian-based distros is inherently a different experience, as those are designed to be reasonably easy and user-friendly. Arch, on the other hand, is about customization, community, geekery and bleeding-edge technology. It&rsquo;s about breaking Linux down and learning how each element of GNU/Linux interacts with each other to give us a full operating system. Manjaro is arguably the most user-friendly way to get into Arch, but it still has the advantages and the challenges of Arch underneath.</p>
+<p>I also discovered that, ironically, AI is ridiculously helpful with figuring out problems you&rsquo;re dealing with. These days, the main AI that I use is Perplexity, as I find it to be the closest to a search engine experience and if you know me, you know that I take a very conservative approach to AI usage so a search engine feel would make sense, but it&rsquo;s also very helpful to have a bunch of sources listed to back up what the AI summarizes.</p>
+<p>Another bit of irony I discovered is that I remarked in my distro choice post that I &ldquo;don’t particularly feel the need to use the AUR&rdquo; because most of what I want is in the native repos or on Flathub. While that may still be true to an extent, having the AUR has already been a <strong>lifesaver</strong> in providing applications and kernel modules I wouldn&rsquo;t necessarily have on a non-Arch distro.</p>
+<p>At this point, less than a week after installing Manjaro, I finally consider myself to be comfortable enough with it to use it as my digital &ldquo;home&rdquo;. While there are still a couple unresolved issues that may or may not require me to set up a Windows dual boot for certain things (hopefully not), I&rsquo;ve learned so much, so quickly, and am already loving my time with this distro!</p>
+<p>Ultimately, while I may have felt discouragement and despair at first, what I began to learn is that what I&rsquo;m <strong>really</strong> experiencing is a sort of &ldquo;second beginning&rdquo;. It reminded me that, even if you think you&rsquo;re advanced, there&rsquo;s no reason to become arrogant or egotistical. There&rsquo;s always more to learn.</p>
+<p>And as long as there&rsquo;s more to learn, you should keep going. A wise man once said:</p>
+
+
+
+
+
+
+
+
+<blockquote class="blockquote-regular">
+  <p>&ldquo;It does not matter how slowly you go, as long as you do not stop.&rdquo;</p>
+
+</blockquote>
+
+      </div>
+
+      
+
+      
+
+
+
+
+      <nav class="post-navigation" aria-label="Post navigation">
+        
+          <a
+            href="/posts/posts/learning-ubuntu-server-1---beginnings/"
+            class="nav-link nav-prev"
+            aria-label="Previous post: Learning Ubuntu Server 1 - Beginnings">
+            <span class="nav-label">Previous</span>
+            <span class="nav-title">Learning Ubuntu Server 1 - Beginnings</span>
+          </a>
+        
+
+        
+          <a
+            href="/posts/posts/frustrations-humblings-and-revelations---a-second-beginning-on-linux/"
+            class="nav-link nav-next"
+            aria-label="Next post: Frustrations, Humblings and Revelations - A Second Beginning on Linux">
+            <span class="nav-label">Next</span>
+            <span class="nav-title">Frustrations, Humblings and Revelations - A Second Beginning on Linux</span>
+          </a>
+        
+      </nav>
+    </article>
+
+    
+  <aside class="post-toc" id="post-toc" aria-label="Table of Contents">
+    <button
+      class="toc-toggle"
+      id="toc-toggle"
+      aria-expanded="true"
+      aria-controls="toc-content"
+      aria-label="Toggle table of contents">
+      <svg
+        class="toc-burger-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <span class="toc-toggle-text">Table of Contents</span>
+      <svg
+        class="toc-chevron-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="toc-content" id="toc-content">
+      <nav class="toc-nav" aria-label="Table of Contents">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#preparation">Preparation</a></li>
+    <li><a href="#starting-the-process">Starting the Process</a></li>
+    <li><a href="#getting-off-the-ground">Getting off the Ground</a></li>
+    <li><a href="#why-is-it-always-networking">Why is it always Networking?</a></li>
+    <li><a href="#lessons-learned--final-thoughts">Lessons Learned &amp; Final Thoughts</a></li>
+  </ul>
+</nav>
+      </nav>
+    </div>
+  </aside>
+
+
+  </div>
+
+    </main>
+
+    <footer>
+      <footer class="site-footer">
+  <div class="footer-content">
+    <p class="footer-text">
+      &copy;
+      
+      2026
+      
+      TenshiNet.
+      
+        Built with Hugo and Mana theme
+      
+    </p>
+    
+      <div class="footer-social">
+        <div class="social-links">
+  
+    <a
+      href="https://github.com/tenshi-net"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-link"
+      aria-label="GitHub">
+      <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          fill-rule="evenodd"
+          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </a>
+  
+
+  
+
+  
+
+  
+
+  
+    <a href="mailto:tenshinet@proton.me" class="social-link" aria-label="Email">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+      </svg>
+    </a>
+  
+  
+</div>
+
+      </div>
+    
+  </div>
+</footer>
+
+    </footer>
+
+    <div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Search" data-no-results="No results found">
+  <div class="search-modal-backdrop" id="search-modal-backdrop"></div>
+  <div class="search-modal-container">
+    <div class="search-input-wrapper">
+      <svg class="search-input-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+      <input
+        type="search"
+        id="search-input"
+        class="search-input"
+        placeholder="Search..."
+        autocomplete="off"
+        aria-label="Search">
+      <button class="search-input-clear" id="search-input-clear" aria-label="Clear search">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+        </svg>
+      </button>
+      <button class="search-modal-close" id="search-modal-close" aria-label="Close search">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>
+
+    
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu-content">
+    <div class="mobile-menu-header">
+      <span class="mobile-menu-title">Menu</span>
+      <button
+        id="mobile-menu-close"
+        class="mobile-menu-close"
+        aria-label="Close menu"
+        type="button">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-nav" role="navigation" aria-label="Mobile navigation">
+      <ul class="menu-list">
+  
+    <li class="menu-item">
+      <a
+        href="/"
+        class="menu-link ">
+        Home
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="/posts/"
+        class="menu-link ">
+        Posts
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="/tags/"
+        class="menu-link ">
+        Tags
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="/about/"
+        class="menu-link ">
+        About
+      </a>
+    </li>
+  
+</ul>
+
+    </nav>
+    <div class="mobile-menu-footer">
+      <button id="mobile-search-toggle" class="mobile-search-toggle" aria-label="Search" type="button">
+        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <span>Search</span>
+      </button>
+      
+
+      <button class="theme-toggle" aria-label="Toggle theme" type="button">
+        <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+    
+
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" type="button">
+  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+  </svg>
+</button>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.137938305a4255a5ce0531471a42b4448c4adb05e04052a70000719c0704d082.js" defer></script>
+
+  </body>
+</html>
