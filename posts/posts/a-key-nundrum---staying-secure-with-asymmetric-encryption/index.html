@@ -1,0 +1,1014 @@
+<!doctype html>
+<html lang="en-us" class="h-full">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="en-us">
+<meta name="theme-color" content="#BD5FFF">
+<script>
+  
+  (function () {
+    const storedTheme = localStorage.getItem("theme");
+    const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = storedTheme || (systemPrefersLight ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+  
+  (function(){var t=sessionStorage.getItem('mana_pt');if(t){document.documentElement.setAttribute('data-page-enter',t);sessionStorage.removeItem('mana_pt');}})();
+  
+  window.MANA_SEARCH_INDEX_URL = '\/index.json';
+  
+  window.MANA_LANG_PREFIXES = ['en'];
+</script>
+<title>A Key-nundrum - Staying secure with asymmetric encryption | TenshiNet</title>
+<meta
+  name="description"
+  content="
+    Asymmetric encryption, also known as public key cryptography, is a common form of encryption utilized today. It&rsquo;s used constantly during web traffic, …
+  
+  ">
+
+
+
+
+
+
+<link rel="canonical" href="https://tenshi-net.github.io/posts/posts/a-key-nundrum---staying-secure-with-asymmetric-encryption/">
+
+
+<link rel="alternate" hreflang="en-us" href="https://tenshi-net.github.io/posts/posts/a-key-nundrum---staying-secure-with-asymmetric-encryption/"><link rel="alternate" hreflang="x-default" href="https://tenshi-net.github.io/posts/posts/a-key-nundrum---staying-secure-with-asymmetric-encryption/">
+
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_us">
+<meta property="og:title" content="A Key-nundrum - Staying secure with asymmetric encryption | TenshiNet">
+<meta property="og:description" content="Asymmetric encryption, also known as public key cryptography, is a common form of encryption utilized today. It&rsquo;s used constantly during web traffic, …">
+<meta property="og:url" content="https://tenshi-net.github.io/posts/posts/a-key-nundrum---staying-secure-with-asymmetric-encryption/">
+<meta property="og:site_name" content="TenshiNet"><meta property="article:published_time" content="2026-05-03T00:00:00Z">
+  <meta
+    property="article:modified_time"
+    content="2026-05-03T00:00:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Key-nundrum - Staying secure with asymmetric encryption | TenshiNet">
+<meta name="twitter:description" content="Asymmetric encryption, also known as public key cryptography, is a common form of encryption utilized today. It&rsquo;s used constantly during web traffic, …">
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","email":"tenshinet@proton.me","name":"TenshiNet","sameAs":["https://github.com/tenshi-net"]},"dateModified":"2026-05-03T00:00:00Z","datePublished":"2026-05-03T00:00:00Z","description":"Asymmetric encryption, also known as public key cryptography, is a common form of encryption utilized today. It\u0026rsquo;s used constantly during web traffic, …","headline":"A Key-nundrum - Staying secure with asymmetric encryption","image":"https://tenshi-net.github.io/images/transparent-logo.png","inLanguage":"en-us","mainEntityOfPage":{"@id":"https://tenshi-net.github.io/posts/posts/a-key-nundrum---staying-secure-with-asymmetric-encryption/","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://tenshi-net.github.io/images/transparent-logo.png"},"name":"TenshiNet","url":"https://tenshi-net.github.io/"},"timeRequired":"PT14M","url":"https://tenshi-net.github.io/posts/posts/a-key-nundrum---staying-secure-with-asymmetric-encryption/","wordCount":2838}</script>
+
+
+
+  
+  
+  
+    
+  
+  
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://tenshi-net.github.io/","name":"Home","position":1},{"@type":"ListItem","item":"https://tenshi-net.github.io/posts/","name":"Posts","position":2},{"@type":"ListItem","item":"https://tenshi-net.github.io/posts/posts/a-key-nundrum---staying-secure-with-asymmetric-encryption/","name":"A Key-nundrum - Staying secure with asymmetric encryption","position":3}]}</script>
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+  media="print"
+  onload="this.media='all'">
+<noscript>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</noscript>
+
+<link rel="stylesheet" href="/css/theme.min.29a2f04a9f41258e6c40c77a2b2be43ac8a3a9805c65165860d8b8ec5c442050.css">
+
+
+  <link
+    rel="stylesheet"
+    href="/css/syntax-dark.min.b01037e5609e6260b74d6fcdd6d5131e8dcbc4d46d6ef4bfbe5a60bdfc1a9f30.css"
+    id="syntax-dark-theme"
+    class="syntax-theme">
+  <link
+    rel="stylesheet"
+    href="/css/syntax-light.min.9602bc2fcef52b4c62e05eae14b48ba428e114f116e993e504d83ed5a3aeda98.css"
+    id="syntax-light-theme"
+    class="syntax-theme"
+    disabled><script>
+  
+  (function () {
+    const storedTheme = localStorage.getItem("theme");
+    const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = storedTheme || (systemPrefersLight ? "light" : "dark");
+
+    const syntaxDark = document.getElementById("syntax-dark-theme");
+    const syntaxLight = document.getElementById("syntax-light-theme");
+
+    if (theme === "light") {
+      if (syntaxDark) syntaxDark.disabled = true;
+      if (syntaxLight) syntaxLight.disabled = false;
+    } else {
+      if (syntaxDark) syntaxDark.disabled = false;
+      if (syntaxLight) syntaxLight.disabled = true;
+    }
+
+    
+    const observer = new MutationObserver(() => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      if (currentTheme === "light") {
+        if (syntaxDark) syntaxDark.disabled = true;
+        if (syntaxLight) syntaxLight.disabled = false;
+      } else {
+        if (syntaxDark) syntaxDark.disabled = false;
+        if (syntaxLight) syntaxLight.disabled = true;
+      }
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+  })();
+</script>
+
+
+
+
+<link rel="stylesheet" href="/css/bundle.min.57d6410f7c0fffb9ad468070f9ab22cec491cb85b9a66f072e8cce12fe18b8e0.css">
+
+
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+
+<link rel="icon" type="image/png" href="/favicon.png">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+<link rel="manifest" href="/site.webmanifest">
+
+
+
+
+  
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="/index.xml"
+      title="TenshiNet">
+  
+
+
+
+
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <a href="#main-content" class="skip-to-main" aria-label="Skip to main content"
+      >Skip to main content</a
+    >
+    <header class="sticky-header">
+      <div class="header-container">
+        <nav class="header-nav" role="navigation" aria-label="Main navigation">
+  <div class="header-content">
+    <div class="header-logo">
+      <a href="/" class="logo-link" aria-label="Home - TenshiNet">
+        TenshiNet
+      </a>
+    </div>
+
+    
+    <button 
+      id="mobile-menu-toggle" 
+      class="mobile-menu-toggle" 
+      aria-label="Toggle menu" 
+      aria-expanded="false"
+      type="button">
+      <span class="hamburger-icon">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </span>
+    </button>
+
+    <div class="header-menu">
+      <ul class="menu-list">
+  
+    <li class="menu-item">
+      <a
+        href="/"
+        class="menu-link ">
+        Home
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="/posts/"
+        class="menu-link ">
+        Posts
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="/about/"
+        class="menu-link ">
+        About
+      </a>
+    </li>
+  
+</ul>
+
+
+      <button id="search-toggle" class="search-toggle" aria-label="Search" type="button">
+        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </button>
+
+      
+
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" type="button">
+  <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+  </svg>
+  <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+  </svg>
+</button>
+
+    </div>
+  </div>
+</nav>
+
+      </div>
+      <div class="reading-progress-bar" aria-hidden="true"></div>
+    </header>
+
+    <main id="main-content" class="flex-1" role="main">
+      
+  <div class="single-post-wrapper">
+    <article class="single-post">
+      
+
+
+
+
+
+
+
+      <header class="post-header">
+        
+
+<nav aria-label="breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+      <meta itemprop="position" content="1" />
+      <span aria-hidden="true" class="breadcrumb-sep">›</span>
+    </li>
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="/posts/" itemprop="item"><span itemprop="name">Posts</span></a>
+      <meta itemprop="position" content="2" />
+      <span aria-hidden="true" class="breadcrumb-sep">›</span>
+    </li>
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <span itemprop="name" class="breadcrumb-current">A Key-nundrum - Staying secure with asymmetric encryption</span>
+      <meta itemprop="position" content="3" />
+    </li>
+  </ol>
+</nav>
+
+
+        <h1 class="post-title-main">A Key-nundrum - Staying secure with asymmetric encryption</h1>
+
+        
+
+        <div class="post-meta">
+  <div class="post-meta-info">
+    <time datetime="2026-05-03T00:00:00Z" class="post-date">
+      <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+      </svg>
+      May 3, 2026
+    </time>
+
+    <span class="meta-separator">•</span>
+
+    
+      <span class="post-word-count">
+        <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+        2838 words
+      </span>
+    
+
+    
+      <span class="meta-separator">•</span>
+      <span class="post-reading-time">
+        <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        14 min
+      </span>
+    
+  </div>
+
+  
+</div>
+
+      </header>
+
+      <div class="post-content-main">
+        <p><strong>Asymmetric encryption</strong>, also known as <strong>public key cryptography</strong>, is a common form of encryption utilized today. It&rsquo;s used constantly during web traffic, specifically during the <a href="https://youtu.be/86cQJ0MMses">TLS handshake</a>. It&rsquo;s also used in end-to-end encrypted messengers (WhatsApp, Signal, etc.) and with Web3/cryptocurrency wallets, among other things. More recently, it has been utilized to develop <a href="https://youtu.be/ExAEb1MizVA">passkeys</a>, often lauded as the next generation of online security.</p>
+<p>Whether you&rsquo;re a geek or not, you&rsquo;re using it on a daily basis for one thing or another, even if you don&rsquo;t necessarily realize it.</p>
+<p>On one hand, this is a very good thing. Asymmetric encryption&rsquo;s main goal is Confidentiality, the first part of the <a href="https://youtu.be/kPPFNrlN3zo">CIA Triad</a> concept within cybersecurity. Put simply, it ensures that the data that&rsquo;s encrypted can only be decrypted by specific people, allowing for secure exchange of data, ownership of blockchain wallets, and more.</p>
+<p>On the other hand, because it operates differently than a traditional username and password combo, it requires a completely different mindset of security. This means that, if you&rsquo;re utilizing asymmetric encryption in a way that isn&rsquo;t managed by another tool such as a web browser handling the aforementioned TLS handshake, you <strong>must</strong> take the time to understand the fundamentals of what&rsquo;s going on, and ways to protect yourself.</p>
+
+
+
+
+
+
+
+
+
+
+
+<div class="alert alert-important" >
+  <div class="alert-header" >
+    <span class="alert-icon">
+      
+      
+      <svg style="width: 1.25em; height: 1.25em; vertical-align: text-bottom; margin-right: 0.2rem;"
+  class="admonition-favicon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"
+  stroke-linecap="round" stroke-linejoin="round">
+  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+  <line x1="12" y1="9" x2="12" y2="13"></line>
+  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+</svg>
+      
+      
+    </span>
+    <span class="alert-title">
+      
+      Important
+      
+    </span>
+    
+  </div>
+  <div class="alert-content" id="alert-0" >
+    <p>I&rsquo;m not an experienced professional. I&rsquo;m learning this subject matter as part of my studies to become an ethical hacker, but please do your own research in addition to what I say here because there&rsquo;s plenty of likelihood that I misspoke or misunderstood certain things. In other words, take what I say with a grain of salt, but I really do appreciate your time in reading what I have to say!</p>
+  </div>
+</div>
+<h1 id="how-does-asymmetric-encryption-work">How does asymmetric encryption work?</h1>
+<p>I won&rsquo;t bore anybody with the long and complicated technicals because it involves math (something I&rsquo;ve never been a fan of) and can really go over a person&rsquo;s head even if they&rsquo;re geeky like me.</p>
+<p>That said, asymmetric encryption can be explained in simpler terms.</p>
+<p>With asymmetric encryption, you would generate what&rsquo;s known as a <strong>key pair</strong>. These cryptographic keys include a <strong>public key</strong> and a <strong>private key</strong>. A message can be encrypted by either of these keys and decrypted by the corresponding key. To put it differently, a public key can decrypt a message encrypted via its matching private key, and a message encrypted with a private key can be decrypted by its matching public key.</p>
+<p>Let&rsquo;s say you want to encrypt a message to your best friend so that only they can read what you said in the message. Both you and your friend will want your own key pair. With asymmetric encryption, the message would be encrypted with your friend&rsquo;s public key. This means that unless someone knows the matching private key, that data remains a jumbled mess that nobody can read; in this case, <strong>only</strong> your friend will be able to decrypt it.</p>
+
+
+
+
+
+
+
+
+
+
+
+<div class="alert alert-info" >
+  <div class="alert-header" >
+    <span class="alert-icon">
+      
+      
+      <svg style="width: 1.25em; height: 1.25em; vertical-align: text-bottom; margin-right: 0.2rem;"
+  class="admonition-favicon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"
+  stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10"></circle>
+  <line x1="12" y1="16" x2="12" y2="12"></line>
+  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+</svg>
+      
+      
+    </span>
+    <span class="alert-title">
+      
+      Info
+      
+    </span>
+    
+  </div>
+  <div class="alert-content" id="alert-1" >
+    <p>No, really! When things are implemented correctly and the key pair is large, it&rsquo;s virtually impossible to crack the encryption with even the most advanced supercomputers! <strong>Isn&rsquo;t that wild?</strong> Quantum computers may pose a threat to this (and it&rsquo;s something that&rsquo;s being addressed with <a href="https://youtu.be/_MoRcYLN-7U">post-quantum cryptography</a>), but with current tech and non-quantum supercomputers, it is virtually impossible to crack.</p>
+  </div>
+</div>
+<p>Now, once your friend receives the encrypted message, they need to decrypt it, right? Well, if you encrypted the message with their public key, how do they decrypt it?</p>
+<p>They decrypt the message you sent using their own private key.</p>
+<p>If they wanted to respond, the process would turn in reverse. They&rsquo;d write their message and then encrypt it using your public key instead of theirs, so that when you receive their message, you can decrypt it using your own private key. This sort of exchange can go on <em>ad infinitum</em>, forever, provided you both keep access to the key pair.</p>
+<h1 id="common-uses-of-asymmetric-encryption">Common uses of asymmetric encryption</h1>
+<p>As I mentioned prior, asymmetric encryption is used in various ways, some of which you likely didn&rsquo;t even realize they were being used.</p>
+<p>When you connect to a modern website, your browser will make an encrypted connection to the website using something called <strong>Transport Layer Security</strong>, or <strong>TLS</strong> for short. Explaining TLS is beyond the scope of this post but the basic principle of it is that when you connect to a website, anything that you send or receive is encrypted in transit, meaning that only you and the website know what data is being sent or received.</p>
+<p>This is what the <code>https://</code> means in your address bar. Before TLS, websites would have the <code>http://</code> prefix instead and data was sent in <em>cleartext</em>, meaning that anyone along the path between you and the website could read all the data being sent. This could include anything from private messages to passwords to banking details. HTTPS solves this and makes it impossible for someone to snoop along your connection and find anything useful.</p>
+
+
+
+
+
+
+
+
+
+
+
+<div class="alert alert-note" >
+  <div class="alert-header" >
+    <span class="alert-icon">
+      
+      
+      <svg style="width: 1.25em; height: 1.25em; vertical-align: text-bottom; margin-right: 0.2rem;"
+  class="admonition-favicon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"
+  stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10"></circle>
+  <line x1="12" y1="16" x2="12" y2="12"></line>
+  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+</svg>
+      
+      
+    </span>
+    <span class="alert-title">
+      
+      Note
+      
+    </span>
+    
+  </div>
+  <div class="alert-content" id="alert-2" >
+    <p>HTTP stands for <strong>HyperText Transfer Protocol</strong>, and HTTPS stands for <strong>HyperText Transfer Protocol Secure</strong>.</p>
+  </div>
+</div>
+<p>Another use of asymmetric encryption is in <strong>end-to-end encrypted</strong> communication services. This would include common apps such as WhatsApp, Signal and Telegram (only on secret chats) or email services like Proton Mail or Tuta. The main difference is that these services manage the encryption on your behalf so you don&rsquo;t have to manage the technical side of things, which is good, because the average person isn&rsquo;t going to want to learn how to do it all themselves.</p>
+<p>Some of these services also utilize more advanced security standards such as <strong>perfect forward secrecy</strong>, encrypting your communications in blocks, which ensures that if one key pair is ever compromised in any way, only that specific block is compromised and the rest of your communications remain secure.</p>
+<p>If you&rsquo;re into Bitcoin, cryptocurrency, Web3 or anything else in that vein, you make <em>heavy</em> usage of asymmetric cryptography through your crypto wallet (typically an app). A crypto wallet app manages all of your individual wallets that store your coins and data. <em>Each individual wallet within your wallet app is actually a key pair</em>. In effect, the public key is your wallet address and the private key is essentially represented by your mnemonic seed (also called a &lsquo;secret phrase&rsquo;, in some wallet apps).</p>
+<p>Any time you make an action with a wallet address, your wallet app is <strong>signing</strong> actions sent to your wallet address, using your private key. Instead of confidential communications, this utilizes asymmetric encryption to ensure that actions sent to your public key are authorized by the private key.</p>
+<p>One last example are passkeys, something you may have heard of in recent years. They utilize key pairs synced with a specific website/service to allow you to quickly sign in to that site/service without a traditional username and password combo. This tech is still essentially in its infancy for the time being, but in principle, once everything moves to passkeys (probably many years down the road), data breaches will no longer be a threat to your login details because the servers won&rsquo;t store a password anymore. This tech is also more resistant to traditional phishing schemes (addressed later), since the key pair is unique between you and the service you&rsquo;re logging in to.</p>
+<p>But that&rsquo;s all more technical and wordy than I intended. Hopefully, now you understand the basic gist of how asymmetric encryption works. Let&rsquo;s move on to the security risks.</p>
+<h1 id="risk-1-loss-of-keys">Risk 1: Loss of keys</h1>
+<p>This is the most obvious one. If you lose access to the key pair, you lose access to the ability to encrypt or decrypt data. For example, if you lose access to your key pair, even if your best friend reminds you of the public key they hold, you can&rsquo;t obtain the private key from that. In other words, that key pair and any data that&rsquo;s encrypted with it become useless and lost to you.</p>
+<h2 id="solution">Solution</h2>
+<p>The easiest one is to utilize a password manager. If you&rsquo;re not already using a password manager, it&rsquo;s crucial for you to start using one. They generate and store highly secure passwords so you only have to remember a single master password, while keeping everything else more secure. I personally recommend <a href="https://account.proton.me/refer-a-friend?referrer=6ZGN2DCW&amp;plan=pass2023">Proton Pass</a>, but an offline manager like <a href="https://keepassxc.org/">KeePassXC</a> (or KeePassDX on mobile) is more secure for storing your key pairs, especially if you&rsquo;re using crypto wallets.</p>
+
+
+
+
+
+
+
+
+
+
+
+<div class="alert alert-tip" >
+  <div class="alert-header" >
+    <span class="alert-icon">
+      
+      
+      <svg style="width: 1.25em; height: 1.25em; vertical-align: text-bottom; margin-right: 0.2rem;"
+  class="admonition-favicon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"
+  stroke-linecap="round" stroke-linejoin="round">
+  <path
+    d="M15 14c.2-1 .7-1.7 1.5-2.5 1-1 1.5-2.4 1.5-3.8 0-3.3-2.7-6-6-6 0 0 0 0-0 0-3.3 0-6 2.7-6 6 0 1.4.5 2.8 1.5 3.8.8.8 1.3 1.5 1.5 2.5">
+  </path>
+  <path d="M9 18h6"></path>
+  <path d="M10 22h4"></path>
+</svg>
+      
+      
+    </span>
+    <span class="alert-title">
+      
+      Tip
+      
+    </span>
+    
+  </div>
+  <div class="alert-content" id="alert-3" >
+    <p>Using a password manager to store your key pairs means that as long as you remember your manager&rsquo;s master password, your keys are stored securely in an encrypted database and you can open that database to retrieve the keys any time you need them, leaving them securely locked away when you&rsquo;re not using them.</p>
+  </div>
+</div>
+<h1 id="risk-2-phishing-and-social-engineering">Risk 2: Phishing and social engineering</h1>
+<p><a href="https://youtu.be/XBkzBrXlle0"><strong>Phishing</strong></a> is when a malicious individual tricks someone into handing over sensitive data. This is often conducted through <strong>social engineering</strong>, impersonation and fake websites. For example, imagine you work for a company and you suddenly get an email that looks like it&rsquo;s from your boss (though you notice that the email address says &lsquo;mrb0ssman&rsquo; instead of &lsquo;mrbossman&rsquo;). The email tells you there&rsquo;s a financial emergency and he needs you to join a Zoom call as soon as possible to discuss it. That link opens up to a website that looks like the normal join menu for a Zoom call, but it&rsquo;s telling you to enter specific login details &ldquo;for security reasons&rdquo; or to &ldquo;verify&rdquo; you&rsquo;re the right person (ironic, isn&rsquo;t it?).</p>
+<p>If you aren&rsquo;t careful, you might have just given your internal work account details to an attacker and, depending on how your company handles its security and privilege management, that could cause a major incident that could lead to loss of money, malware attacks, or even a full compromise of the company&rsquo;s internal infrastructure!</p>
+<p>Phishing is a major threat to your usage of asymmetric encryption. The encryption itself is mathematically secure, but as is often the case, the weakest link in the security chain is the human being.</p>
+<h2 id="solution-1">Solution</h2>
+<p>The worst part is that there are so many threats in this vein that it&rsquo;s impossible to go over them in this post.</p>
+<p>The best suggestion I can offer is to do your due diligence on common phishing threats and educate yourself on ways to detect them. One good security channel for the everyman is <a href="https://www.youtube.com/@AllThingsSecured">All Things Secured</a> by my friend, Josh Summers. Josh is actually the first person who got me interested in entering cybersecurity! His channel, in his own words, offers &ldquo;Easy-to-follow tips and tutorials to help the non-tech savvy person build stronger privacy and security online.&rdquo; Subscribe and start watching his videos in your spare time; even if not all of the topics interest you, you&rsquo;re bound to learn how to improve your security and privacy.</p>
+
+
+
+
+
+
+
+
+
+
+
+<div class="alert alert-warning" >
+  <div class="alert-header" >
+    <span class="alert-icon">
+      
+      
+      <svg style="width: 1.25em; height: 1.25em; vertical-align: text-bottom; margin-right: 0.2rem;"
+  class="admonition-favicon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"
+  stroke-linecap="round" stroke-linejoin="round">
+  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+  <line x1="12" y1="9" x2="12" y2="13"></line>
+  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+</svg>
+      
+      
+    </span>
+    <span class="alert-title">
+      
+      Warning
+      
+    </span>
+    
+  </div>
+  <div class="alert-content" id="alert-4" >
+    <p>You have to be careful when browsing the web. Avoid visiting random websites when you&rsquo;re able to do so. It&rsquo;s best to avoid piracy, adult services and other shady activities because that&rsquo;s where a lot of attacks lurk. Malicious actors often target the low-hanging fruit. Some websites might be able to do a <strong>drive-by attack</strong>, which is just like it sounds: they manage to attack you with some form of malware just by visiting the site. If your browser doesn&rsquo;t have more advanced protections and an ad blocker, you&rsquo;re risking yourself even more with those kinds of attacks.</p>
+  </div>
+</div>
+<p>Speaking of ad blockers, don&rsquo;t feel guilty using one. I highly recommend switching to the <a href="https://brave.com/">Brave browser</a> for various reasons, not the least of which is its <em>powerful</em> built-in ad and tracking blocker called Shields. That said, even if you&rsquo;re not using Brave, you absolutely should install an ad blocker of some sort. Two really good options include <a href="https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh">uBlock Origin</a> (<a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">Firefox version</a>) and <a href="https://chromewebstore.google.com/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg">AdGuard</a> (<a href="https://addons.mozilla.org/en-US/firefox/addon/adguard-adblocker/">Firefox version</a>), though you won&rsquo;t have full protections of either on Chrome, Edge, Vivaldi and the like due to a Google policy.</p>
+<h1 id="risk-3-not-a-password">Risk 3: Not a password</h1>
+<p>When an account is compromised and it uses a traditional username and password combo, you can change the password of that account after you take care of the original threat and that usually will lock the attacker out. You can also change those passwords over time, something that is regularly enforced in password policies within workplaces (though such policies are somewhat controversial).</p>
+<p>With an asymmetric key pair, you can&rsquo;t change one of the keys. You have to generate an entirely new key pair and start using that instead. This presents obvious issues:</p>
+<ol>
+<li>If an attacker gains access to your private key, they effectively control that key pair entirely, meaning they can decrypt or sign whatever they want.</li>
+<li>This presents a great risk to services that utilize asymmetric cryptography for accounts. One example would be Nostr, where a public key replaces the traditional handle/username and a private key replaces the traditional password. If an attacker gains your private key (in Nostr&rsquo;s case, what&rsquo;s known as an <strong>nsec</strong>), they have total control over your account and there&rsquo;s literally nothing you can do about it: you must start over with a fresh account.</li>
+<li>With cryptocurrency and Web3, the same principle applies: if someone gains access to the private key of any of your wallets, they have total control over that wallet and there&rsquo;s nothing that can be done except to start a new wallet. This is particularly dangerous if you take cryptocurrency seriously; people have lost fortunes in cryptocurrency by either forgetting their private key or by losing it to an attacker. This is why you will see a crypto wallet app tell you to be very careful with your mnemonic seed (or &ldquo;secret phrase&rdquo;, as some call it).</li>
+</ol>
+<h2 id="solution-2">Solution</h2>
+<p>This goes hand-in-hand with the phishing section. There&rsquo;s no fool-proof way to avoid this, but education and caution are your best friends here. Educate yourself on phishing threats.</p>
+
+
+
+
+
+
+
+
+
+
+
+<div class="alert alert-danger" >
+  <div class="alert-header" >
+    <span class="alert-icon">
+      
+      
+      <svg style="width: 1.25em; height: 1.25em; vertical-align: text-bottom; margin-right: 0.2rem;"
+  class="admonition-favicon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"
+  stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10"></circle>
+  <line x1="15" y1="9" x2="9" y2="15"></line>
+  <line x1="9" y1="9" x2="15" y2="15"></line>
+</svg>
+      
+      
+    </span>
+    <span class="alert-title">
+      
+      Danger
+      
+    </span>
+    
+  </div>
+  <div class="alert-content" id="alert-5" >
+    <p>Don&rsquo;t visit shady sites, avoid installing random apps without researching them, and <strong>never</strong> give anyone, and I mean <em><strong>anyone</strong></em>, your private key/mnemonic seed/secret phrase/nsec. There&rsquo;s literally no reason anyone but you should ever have access to it.</p>
+  </div>
+</div>
+<p>Again, the human is the weakest link in the chain of security. The best possible thing you can do is keep yourself educated, stay informed and be cautious with everything you do online.</p>
+<h1 id="some-final-thoughts">Some final thoughts</h1>
+<p>At the end of the day, asymmetric encryption is incredible technology and its usefulness for security and privacy is immeasurable. It supports self-sovereignty, it keeps you in control over your data. However, as the old adage goes&hellip;</p>
+
+
+
+
+
+
+
+
+<blockquote class="blockquote-regular">
+  <p>With great power comes great responsibility.</p>
+
+</blockquote>
+<p>This technology allows for far more security in technicality, and it allows greater end user control, but it also poses some risks. As with everything, there&rsquo;s a tradeoff.</p>
+<p>The important thing to remember is that <strong>you</strong> are responsible for learning the basics of this technology. <strong>You</strong> are responsible for keeping yourself informed. <strong>You</strong> are responsible for taking care of your security hygiene. <strong>You alone.</strong></p>
+<p>That doesn&rsquo;t mean you need to go out and learn what XOR and modulo operators are, or know how what AES, RSA or Diffie-Hellman mean, or know the difference between 128- and 256-bit AES. You don&rsquo;t have to know the technical aspects of how this tech works (I&rsquo;m not a pro at it myself), you just need to know how you interact with it and the ways that attackers might seek to compromise your keys.</p>
+<p><strong>The greatest weapon in the information age is information itself.</strong></p>
+<p>Use a password manager and two-factor authentication, ideally through an authenticator app or physical security key. Keep your software and operating system updated. Use security software. Avoid random downloads and double-check what software and apps you install. Occasionally check app permissions to make sure they don&rsquo;t use more than they require (I might cover that in a later post). Only visit sites you know and trust. Use the <a href="https://youtu.be/yxlR1st8QKI">S.T.O.P method</a> when reading emails and messages online.</p>
+<h1 id="additional-resources">Additional resources</h1>
+<p>If what you read here is interesting to you and you&rsquo;d like to dive deeper into the technicals, <a href="https://www.youtube.com/@Computerphile">Computerphile</a> is a fantastic channel that covers topics like this in depth. I linked to them a couple times in this article because their videos are fantastic for topics like this.</p>
+<p>If you&rsquo;d like something a bit more hands-on, my learning platform of choice (<a href="https://tryhackme.com/">TryHackMe</a>) has a few rooms dedicated to cryptography, such as <a href="https://tryhackme.com/room/cryptographybasics">Cryptography Basics</a> and <a href="https://tryhackme.com/room/publickeycrypto">Public Key Cryptography Basics</a>, the latter of which covers the type of cryptography I&rsquo;m talking about about in this post. If you&rsquo;re struggling to follow along with those, consider trying their <a href="https://tryhackme.com/path/outline/presecurity">Pre-Security</a> learning path, especially if you&rsquo;re feeling very intrigued by the subject matter today.</p>
+
+
+
+
+
+
+
+
+
+
+
+<div class="alert alert-info" >
+  <div class="alert-header" >
+    <span class="alert-icon">
+      
+      
+      <svg style="width: 1.25em; height: 1.25em; vertical-align: text-bottom; margin-right: 0.2rem;"
+  class="admonition-favicon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"
+  stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10"></circle>
+  <line x1="12" y1="16" x2="12" y2="12"></line>
+  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+</svg>
+      
+      
+    </span>
+    <span class="alert-title">
+      
+      Info
+      
+    </span>
+    
+  </div>
+  <div class="alert-content" id="alert-7" >
+    <p>I&rsquo;m not sponsored by any of the content or services I link to or recommend. They are purely personal recommendations and are certainly not the only options. I <strong>did</strong>, however, share my referral link when I linked to Proton Pass. I don&rsquo;t get paid for it, but I do earn credits for my account to help me pay for my own premium subscription. You don&rsquo;t have to use that referral link but if you do, I sincerely appreciate it!</p>
+  </div>
+</div>
+
+      </div>
+
+      
+
+      
+
+
+
+
+      <nav class="post-navigation" aria-label="Post navigation">
+        
+          <a
+            href="/posts/posts/on-discouragement---lessons-from-career-failures/"
+            class="nav-link nav-prev"
+            aria-label="Previous post: On Discouragement - Lessons from Career Failures">
+            <span class="nav-label">Previous</span>
+            <span class="nav-title">On Discouragement - Lessons from Career Failures</span>
+          </a>
+        
+
+        
+      </nav>
+    </article>
+
+    
+  <aside class="post-toc" id="post-toc" aria-label="Table of Contents">
+    <button
+      class="toc-toggle"
+      id="toc-toggle"
+      aria-expanded="true"
+      aria-controls="toc-content"
+      aria-label="Toggle table of contents">
+      <svg
+        class="toc-burger-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <span class="toc-toggle-text">Table of Contents</span>
+      <svg
+        class="toc-chevron-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="toc-content" id="toc-content">
+      <nav class="toc-nav" aria-label="Table of Contents">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#how-does-asymmetric-encryption-work">How does asymmetric encryption work?</a></li>
+    <li><a href="#common-uses-of-asymmetric-encryption">Common uses of asymmetric encryption</a></li>
+    <li><a href="#risk-1-loss-of-keys">Risk 1: Loss of keys</a>
+      <ul>
+        <li><a href="#solution">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#risk-2-phishing-and-social-engineering">Risk 2: Phishing and social engineering</a>
+      <ul>
+        <li><a href="#solution-1">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#risk-3-not-a-password">Risk 3: Not a password</a>
+      <ul>
+        <li><a href="#solution-2">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#some-final-thoughts">Some final thoughts</a></li>
+    <li><a href="#additional-resources">Additional resources</a></li>
+  </ul>
+</nav>
+      </nav>
+    </div>
+  </aside>
+
+
+  </div>
+
+    </main>
+
+    <footer>
+      <footer class="site-footer">
+  <div class="footer-content">
+    <p class="footer-text">
+      &copy;
+      
+      2026
+      
+      TenshiNet.
+      
+        Built with Hugo and Mana theme
+      
+    </p>
+    
+      <div class="footer-social">
+        <div class="social-links">
+  
+    <a
+      href="https://github.com/tenshi-net"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-link"
+      aria-label="GitHub">
+      <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          fill-rule="evenodd"
+          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </a>
+  
+
+  
+
+  
+
+  
+
+  
+    <a href="mailto:tenshinet@proton.me" class="social-link" aria-label="Email">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+      </svg>
+    </a>
+  
+  
+</div>
+
+      </div>
+    
+  </div>
+</footer>
+
+    </footer>
+
+    <div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Search" data-no-results="No results found">
+  <div class="search-modal-backdrop" id="search-modal-backdrop"></div>
+  <div class="search-modal-container">
+    <div class="search-input-wrapper">
+      <svg class="search-input-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+      <input
+        type="search"
+        id="search-input"
+        class="search-input"
+        placeholder="Search..."
+        autocomplete="off"
+        aria-label="Search">
+      <button class="search-input-clear" id="search-input-clear" aria-label="Clear search">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+        </svg>
+      </button>
+      <button class="search-modal-close" id="search-modal-close" aria-label="Close search">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>
+
+    
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu-content">
+    <div class="mobile-menu-header">
+      <span class="mobile-menu-title">Menu</span>
+      <button
+        id="mobile-menu-close"
+        class="mobile-menu-close"
+        aria-label="Close menu"
+        type="button">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-nav" role="navigation" aria-label="Mobile navigation">
+      <ul class="menu-list">
+  
+    <li class="menu-item">
+      <a
+        href="/"
+        class="menu-link ">
+        Home
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="/posts/"
+        class="menu-link ">
+        Posts
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="/about/"
+        class="menu-link ">
+        About
+      </a>
+    </li>
+  
+</ul>
+
+    </nav>
+    <div class="mobile-menu-footer">
+      <button id="mobile-search-toggle" class="mobile-search-toggle" aria-label="Search" type="button">
+        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <span>Search</span>
+      </button>
+      
+
+      <button class="theme-toggle" aria-label="Toggle theme" type="button">
+        <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+    
+
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" type="button">
+  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+  </svg>
+</button>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.137938305a4255a5ce0531471a42b4448c4adb05e04052a70000719c0704d082.js" defer></script>
+
+  </body>
+</html>

@@ -6,8 +6,15 @@
     <description>Recent content on TenshiNet</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tenshi-net.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Key-nundrum - Staying secure with asymmetric encryption</title>
+      <link>https://tenshi-net.github.io/posts/posts/a-key-nundrum---staying-secure-with-asymmetric-encryption/</link>
+      <pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://tenshi-net.github.io/posts/posts/a-key-nundrum---staying-secure-with-asymmetric-encryption/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Asymmetric encryption&lt;/strong&gt;, also known as &lt;strong&gt;public key cryptography&lt;/strong&gt;, is a common form of encryption utilized today. It&amp;rsquo;s used constantly during web traffic, specifically during the &lt;a href=&#34;https://youtu.be/86cQJ0MMses&#34;&gt;TLS handshake&lt;/a&gt;. It&amp;rsquo;s also used in end-to-end encrypted messengers (WhatsApp, Signal, etc.) and with Web3/cryptocurrency wallets, among other things. More recently, it has been utilized to develop &lt;a href=&#34;https://youtu.be/ExAEb1MizVA&#34;&gt;passkeys&lt;/a&gt;, often lauded as the next generation of online security.&lt;/p&gt;&#xA;&lt;p&gt;Whether you&amp;rsquo;re a geek or not, you&amp;rsquo;re using it on a daily basis for one thing or another, even if you don&amp;rsquo;t necessarily realize it.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>On Discouragement - Lessons from Career Failures</title>
       <link>https://tenshi-net.github.io/posts/posts/on-discouragement---lessons-from-career-failures/</link>
