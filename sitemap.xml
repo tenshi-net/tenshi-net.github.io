@@ -2,104 +2,114 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tenshi-net.github.io/posts/posts/a-key-nundrum---staying-secure-with-asymmetric-encryption/</loc>
+    <loc>http://localhost:1313/posts/posts/pixel-locked---staying-secure-as-a-pc-gamer/</loc>
+    <lastmod>2026-05-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/posts/posts/pixel-locked---staying-secure-as-a-pc-gamer/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-05-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/posts/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-05-06T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/posts/a-key-nundrum---staying-secure-with-asymmetric-encryption/</loc>
     <lastmod>2026-05-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://tenshi-net.github.io/posts/posts/a-key-nundrum---staying-secure-with-asymmetric-encryption/"/>
+               href="http://localhost:1313/posts/posts/a-key-nundrum---staying-secure-with-asymmetric-encryption/"/>
   </url>
   <url>
-    <loc>https://tenshi-net.github.io/posts/</loc>
-    <lastmod>2026-05-03T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-               rel="alternate"
-               hreflang="en"
-               href="https://tenshi-net.github.io/posts/"/>
-  </url>
-  <url>
-    <loc>https://tenshi-net.github.io/</loc>
-    <lastmod>2026-05-03T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link
-               rel="alternate"
-               hreflang="en"
-               href="https://tenshi-net.github.io/"/>
-  </url>
-  <url>
-    <loc>https://tenshi-net.github.io/posts/posts/on-discouragement---lessons-from-career-failures/</loc>
+    <loc>http://localhost:1313/posts/posts/on-discouragement---lessons-from-career-failures/</loc>
     <lastmod>2025-10-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://tenshi-net.github.io/posts/posts/on-discouragement---lessons-from-career-failures/"/>
+               href="http://localhost:1313/posts/posts/on-discouragement---lessons-from-career-failures/"/>
   </url>
   <url>
-    <loc>https://tenshi-net.github.io/posts/posts/frustrations-humblings-and-revelations---a-second-beginning-on-linux/</loc>
+    <loc>http://localhost:1313/posts/posts/frustrations-humblings-and-revelations---a-second-beginning-on-linux/</loc>
     <lastmod>2025-10-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://tenshi-net.github.io/posts/posts/frustrations-humblings-and-revelations---a-second-beginning-on-linux/"/>
+               href="http://localhost:1313/posts/posts/frustrations-humblings-and-revelations---a-second-beginning-on-linux/"/>
   </url>
   <url>
-    <loc>https://tenshi-net.github.io/posts/posts/learning-ubuntu-server-1---beginnings/</loc>
+    <loc>http://localhost:1313/posts/posts/learning-ubuntu-server-1---beginnings/</loc>
     <lastmod>2025-10-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://tenshi-net.github.io/posts/posts/learning-ubuntu-server-1---beginnings/"/>
+               href="http://localhost:1313/posts/posts/learning-ubuntu-server-1---beginnings/"/>
   </url>
   <url>
-    <loc>https://tenshi-net.github.io/posts/posts/navigating-linux-distros---my-personal-journey/</loc>
+    <loc>http://localhost:1313/posts/posts/navigating-linux-distros---my-personal-journey/</loc>
     <lastmod>2025-08-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://tenshi-net.github.io/posts/posts/navigating-linux-distros---my-personal-journey/"/>
+               href="http://localhost:1313/posts/posts/navigating-linux-distros---my-personal-journey/"/>
   </url>
   <url>
-    <loc>https://tenshi-net.github.io/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://tenshi-net.github.io/about/"/>
+               href="http://localhost:1313/about/"/>
   </url>
   <url>
-    <loc>https://tenshi-net.github.io/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://tenshi-net.github.io/categories/"/>
+               href="http://localhost:1313/categories/"/>
   </url>
   <url>
-    <loc>https://tenshi-net.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://tenshi-net.github.io/tags/"/>
+               href="http://localhost:1313/tags/"/>
   </url>
   
 </urlset>
