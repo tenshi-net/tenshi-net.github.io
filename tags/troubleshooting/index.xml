@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Troubleshooting on TenshiNet</title>
+    <link>http://localhost:1313/tags/troubleshooting/</link>
+    <description>Recent content in Troubleshooting on TenshiNet</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Network Nightmare [Troubleshooting Tales #1]</title>
+      <link>http://localhost:1313/posts/posts/network-nightmare---troubleshooting-tales-1/</link>
+      <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/posts/network-nightmare---troubleshooting-tales-1/</guid>
+      <description>&lt;p&gt;In over eight months of using Manjaro Linux as my daily driver, I&amp;rsquo;ve encountered a handful of oddities and issues that I&amp;rsquo;ve had to sink a few hours into fixing. By and large, the experience has been smooth, but when something breaks, it seems to break randomly and without immediately apparent cause. I just dealt with another such situation and figured I would write down what I did to fix the issue as part of a new post series I&amp;rsquo;m starting: &amp;ldquo;Troubleshooting Tales&amp;rdquo;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
