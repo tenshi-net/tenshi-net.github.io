@@ -6,8 +6,15 @@
     <description>Recent content in Homelab on TenshiNet</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An Unnecessarily Complicated Framework: my blog pipeline</title>
+      <link>http://localhost:1313/posts/posts/an-unnecessarily-complicated-framework/</link>
+      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/posts/an-unnecessarily-complicated-framework/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;re reading this blog, chances are that you don&amp;rsquo;t realize how complicated things are behind the scenes. What looks like a visually-appealing, easy-to-view blog for my career, home lab and tech opinions is actually several Git(hub) repositories publishing markdown files piped in direct from my primary Obsidian vault.&lt;/p&gt;&#xA;&lt;p&gt;Why did I do it this way, when spinning up something like a WordPress blog would&amp;rsquo;ve been so much simpler and easier?&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Network Nightmare [Troubleshooting Tales #1]</title>
       <link>http://localhost:1313/posts/posts/network-nightmare---troubleshooting-tales-1/</link>
