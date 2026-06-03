@@ -6,8 +6,15 @@
     <description>Recent content in Project on TenshiNet</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Running Pi-Hole on old hardware</title>
+      <link>http://localhost:1313/posts/posts/pihole-on-old-hardware/</link>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/posts/pihole-on-old-hardware/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;&#xA;&lt;p&gt;When I first started getting into Raspberry Pi and similar technology, it was with an original Pi Model B that was a spare from a family member. I quickly discovered that it would be immensely limited in project potential and I&amp;rsquo;d have to buy more advanced models to do bigger projects (which I did end up buying).&lt;/p&gt;&#xA;&lt;p&gt;At the same time, I knew I wanted to find &lt;strong&gt;some&lt;/strong&gt; use case for this Pi. After I did some research, I learned that installing Pi-Hole would work. Funny enough, I had Pi-Hole as a project idea for a while, as I was researching projects that would be both practical and a good learning experience for security-related fields. As such, it was an easy decision to make that the project for this particular Pi.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>A Raspberry Pi MS-DOS Build</title>
       <link>http://localhost:1313/posts/posts/pi-msdos-build/</link>
