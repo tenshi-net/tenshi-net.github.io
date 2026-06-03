@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="en-us" class="h-full">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="en-us">
+<meta name="theme-color" content="#BD5FFF">
+<script>
+  
+  (function () {
+    const storedTheme = localStorage.getItem("theme");
+    const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = storedTheme || (systemPrefersLight ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+  
+  (function(){var t=sessionStorage.getItem('mana_pt');if(t){document.documentElement.setAttribute('data-page-enter',t);sessionStorage.removeItem('mana_pt');}})();
+  
+  window.MANA_SEARCH_INDEX_URL = '\/index.json';
+  
+  window.MANA_LANG_PREFIXES = ['en'];
+</script>
+<title>A Raspberry Pi MS-DOS Build | TenshiNet</title>
+<meta
+  name="description"
+  content="
+    Introduction As a &lsquo;young&rsquo; Millennial, I grew up in the late 90s and early 2000s. Even then, for a variety of reasons, my family often lagged a …
+  
+  ">
+
+
+  <meta name="keywords" content="raspberrypi, homelab, project, retro">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/posts/pi-msdos-build/">
+
+
+<link rel="alternate" hreflang="en-us" href="http://localhost:1313/posts/posts/pi-msdos-build/"><link rel="alternate" hreflang="x-default" href="http://localhost:1313/posts/posts/pi-msdos-build/">
+
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_us">
+<meta property="og:title" content="A Raspberry Pi MS-DOS Build | TenshiNet">
+<meta property="og:description" content="Introduction As a &lsquo;young&rsquo; Millennial, I grew up in the late 90s and early 2000s. Even then, for a variety of reasons, my family often lagged a …">
+<meta property="og:url" content="http://localhost:1313/posts/posts/pi-msdos-build/">
+<meta property="og:site_name" content="TenshiNet"><meta property="article:published_time" content="2026-06-02T00:00:00Z">
+  <meta
+    property="article:modified_time"
+    content="2026-06-02T00:00:00Z"><meta property="article:section" content="raspberrypi"><meta property="article:tag" content="raspberrypi"><meta property="article:tag" content="homelab"><meta property="article:tag" content="project"><meta property="article:tag" content="retro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Raspberry Pi MS-DOS Build | TenshiNet">
+<meta name="twitter:description" content="Introduction As a &lsquo;young&rsquo; Millennial, I grew up in the late 90s and early 2000s. Even then, for a variety of reasons, my family often lagged a …">
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+  
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","email":"tenshinet@proton.me","name":"TenshiNet","sameAs":["https://github.com/tenshi-net"]},"dateModified":"2026-06-02T00:00:00Z","datePublished":"2026-06-02T00:00:00Z","description":"Introduction As a \u0026lsquo;young\u0026rsquo; Millennial, I grew up in the late 90s and early 2000s. Even then, for a variety of reasons, my family often lagged a …","headline":"A Raspberry Pi MS-DOS Build","image":"http://localhost:1313/images/transparent-logo.png","inLanguage":"en-us","keywords":["raspberrypi","homelab","project","retro"],"mainEntityOfPage":{"@id":"http://localhost:1313/posts/posts/pi-msdos-build/","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:1313/images/transparent-logo.png"},"name":"TenshiNet","url":"http://localhost:1313/"},"timeRequired":"PT10M","url":"http://localhost:1313/posts/posts/pi-msdos-build/","wordCount":2123}</script>
+
+
+
+  
+  
+  
+    
+  
+  
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Home","position":1},{"@type":"ListItem","item":"http://localhost:1313/posts/","name":"Posts","position":2},{"@type":"ListItem","item":"http://localhost:1313/posts/posts/pi-msdos-build/","name":"A Raspberry Pi MS-DOS Build","position":3}]}</script>
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+  media="print"
+  onload="this.media='all'">
+<noscript>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</noscript>
+
+<link rel="stylesheet" href="/css/theme.min.29a2f04a9f41258e6c40c77a2b2be43ac8a3a9805c65165860d8b8ec5c442050.css">
+
+
+  <link
+    rel="stylesheet"
+    href="/css/syntax-dark.min.b01037e5609e6260b74d6fcdd6d5131e8dcbc4d46d6ef4bfbe5a60bdfc1a9f30.css"
+    id="syntax-dark-theme"
+    class="syntax-theme">
+  <link
+    rel="stylesheet"
+    href="/css/syntax-light.min.9602bc2fcef52b4c62e05eae14b48ba428e114f116e993e504d83ed5a3aeda98.css"
+    id="syntax-light-theme"
+    class="syntax-theme"
+    disabled><script>
+  
+  (function () {
+    const storedTheme = localStorage.getItem("theme");
+    const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = storedTheme || (systemPrefersLight ? "light" : "dark");
+
+    const syntaxDark = document.getElementById("syntax-dark-theme");
+    const syntaxLight = document.getElementById("syntax-light-theme");
+
+    if (theme === "light") {
+      if (syntaxDark) syntaxDark.disabled = true;
+      if (syntaxLight) syntaxLight.disabled = false;
+    } else {
+      if (syntaxDark) syntaxDark.disabled = false;
+      if (syntaxLight) syntaxLight.disabled = true;
+    }
+
+    
+    const observer = new MutationObserver(() => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      if (currentTheme === "light") {
+        if (syntaxDark) syntaxDark.disabled = true;
+        if (syntaxLight) syntaxLight.disabled = false;
+      } else {
+        if (syntaxDark) syntaxDark.disabled = false;
+        if (syntaxLight) syntaxLight.disabled = true;
+      }
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+  })();
+</script>
+
+
+
+
+<link rel="stylesheet" href="/css/bundle.min.57d6410f7c0fffb9ad468070f9ab22cec491cb85b9a66f072e8cce12fe18b8e0.css">
+
+
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+
+<link rel="icon" type="image/png" href="/favicon.png">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+<link rel="manifest" href="/site.webmanifest">
+
+
+
+
+  
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="/index.xml"
+      title="TenshiNet">
+  
+
+
+
+
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <a href="#main-content" class="skip-to-main" aria-label="Skip to main content"
+      >Skip to main content</a
+    >
+    <header class="sticky-header">
+      <div class="header-container">
+        <nav class="header-nav" role="navigation" aria-label="Main navigation">
+  <div class="header-content">
+    <div class="header-logo">
+      <a href="/" class="logo-link" aria-label="Home - TenshiNet">
+        TenshiNet
+      </a>
+    </div>
+
+    
+    <button 
+      id="mobile-menu-toggle" 
+      class="mobile-menu-toggle" 
+      aria-label="Toggle menu" 
+      aria-expanded="false"
+      type="button">
+      <span class="hamburger-icon">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </span>
+    </button>
+
+    <div class="header-menu">
+      <ul class="menu-list">
+  
+    <li class="menu-item">
+      <a
+        href="/"
+        class="menu-link ">
+        Home
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="/posts/"
+        class="menu-link ">
+        Posts
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="/about/"
+        class="menu-link ">
+        About
+      </a>
+    </li>
+  
+</ul>
+
+
+      <button id="search-toggle" class="search-toggle" aria-label="Search" type="button">
+        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </button>
+
+      
+
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" type="button">
+  <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+  </svg>
+  <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+  </svg>
+</button>
+
+    </div>
+  </div>
+</nav>
+
+      </div>
+      <div class="reading-progress-bar" aria-hidden="true"></div>
+    </header>
+
+    <main id="main-content" class="flex-1" role="main">
+      
+  <div class="single-post-wrapper">
+    <article class="single-post">
+      
+
+
+
+
+
+
+
+      <header class="post-header">
+        
+
+<nav aria-label="breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+      <meta itemprop="position" content="1" />
+      <span aria-hidden="true" class="breadcrumb-sep">›</span>
+    </li>
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="/posts/" itemprop="item"><span itemprop="name">Posts</span></a>
+      <meta itemprop="position" content="2" />
+      <span aria-hidden="true" class="breadcrumb-sep">›</span>
+    </li>
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <span itemprop="name" class="breadcrumb-current">A Raspberry Pi MS-DOS Build</span>
+      <meta itemprop="position" content="3" />
+    </li>
+  </ol>
+</nav>
+
+
+        <h1 class="post-title-main">A Raspberry Pi MS-DOS Build</h1>
+
+        
+
+        <div class="post-meta">
+  <div class="post-meta-info">
+    <time datetime="2026-06-02T00:00:00Z" class="post-date">
+      <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+      </svg>
+      June 2, 2026
+    </time>
+
+    <span class="meta-separator">•</span>
+
+    
+      <span class="post-word-count">
+        <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+        2123 words
+      </span>
+    
+
+    
+      <span class="meta-separator">•</span>
+      <span class="post-reading-time">
+        <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        10 min
+      </span>
+    
+  </div>
+
+  
+    <div class="post-tags">
+      
+        <a href="/tags/raspberrypi" class="post-tag">raspberrypi</a>
+      
+        <a href="/tags/homelab" class="post-tag">homelab</a>
+      
+        <a href="/tags/project" class="post-tag">project</a>
+      
+        <a href="/tags/retro" class="post-tag">retro</a>
+      
+    </div>
+  
+</div>
+
+      </header>
+
+      <div class="post-content-main">
+        <h1 id="introduction">Introduction</h1>
+<p>As a &lsquo;young&rsquo; Millennial, I grew up in the late 90s and early 2000s. Even then, for a variety of reasons, my family often lagged a generation behind on tech. As such, I grew up on late MS-DOS games alongside early Windows games, and due to nostalgia and my growing interest in the fundamental ways computers work, I&rsquo;ve developed a greater interest in retro computers and games.</p>
+<p>Over the early months of 2026, I also found myself developing an interest in single-board computers (Raspberry Pi) and microcontrollers, but I needed a basic project that I could start off with, so I decided to give this a try. I really want to get into retro computing proper, but it&rsquo;s not a cheap hobby by any means. Instead, I decided to combine these two recent interests as a starter Pi project and build a &ldquo;nostalgia box&rdquo; to relive some level of my early childhood experiences on PC!</p>
+<h1 id="system-overview">System Overview</h1>
+<table>
+  <thead>
+      <tr>
+          <th>Hardware</th>
+          <th>OS</th>
+          <th>Software</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CanaKit Pi Zero 2 W Starter MAX Kit</td>
+          <td>PiOS Lite (64-bit)</td>
+          <td>DOSBox-X | SyncTerm | Windows 2.03 and 3.1 | Various DOS games (mostly shareware for now)</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<p><strong>DIFFICULTY LEVEL:</strong> Intermediate</p>
+<h1 id="build-process">Build process</h1>
+<ol>
+<li>Buy a Raspberry Pi Zero 2 W. If you don&rsquo;t already have Pi gear, it&rsquo;d be smart to get some sort of starter kit as I did. My kit included a case, power supply, heat sink, microSD card (64GB, but I swapped it out for a 32GB and will use the 64GB card for a later project), as well as adapters, and a <em>very</em> useful power switch to toggle the system on and off without having to plug/unplug the power supply.
+<ul>
+<li>You&rsquo;ll also want to make sure you have a basic USB keyboard with a cord that doesn&rsquo;t take much power. The typical Raspberry Pi keyboard doesn&rsquo;t work because it draws too much power. I used a flat Apple keyboard which includes additional USB ports for me to plug in a Raspberry Pi mouse.</li>
+</ul>
+</li>
+<li>Flash the microSD with PiOS Lite (64-bit). Lite is 100% necessary due to the Zero 2 W&rsquo;s limited RAM (only 512MB). This means you&rsquo;ll need to be comfortable with a command line, but considering what this project is, I would assume you probably are.</li>
+<li>Once you have your Zero 2 W running with PiOS Lite, run updates: <code>sudo apt update &amp;&amp; sudo apt upgrade -y</code></li>
+<li>(OPTIONAL) Set up SSH for remote maintenance. Not quite as critical as some builds but might be nice, nonetheless.</li>
+<li>In order to get DOSBox-X running, you have to install some basic X11 dependencies. This command will fetch the dependencies needed:
+<ul>
+<li><code>sudo apt install xinit xserver-xorg x11-xserver-utils</code></li>
+</ul>
+</li>
+<li>After those dependencies are installed, you can install DOSBox-X itself through <code>sudo apt install dosbox-x</code>.</li>
+<li>Once you have both the dependencies and DOSBox-X installed, you simply run it by typing <code>dosbox-x</code> into the command line.</li>
+<li>From here, it&rsquo;s up to you to familiarize yourself with DOSBox-X, as it does quite a bit differently than classic DOSBox, which is outdated and meant to be used for gaming more than anything.
+<ul>
+<li>One quick tip to get yourself into an actionable DOS prompt: first, run <code>mount C /home/[username]/[folder with your games and software]</code>. Then, enter <code>C:</code> in the prompt, and you&rsquo;ll be able to see and use whatever games/software you have in that folder. You&rsquo;ll have to re-enter that every time you start DOSBox-X but there are ways to set it to do that automatically if you prefer. <a href="https://sierrahelp.com/Utilities/Emulators/DOSBox/DOSBoxGuide-Mount.html#Automating">This article</a> is meant for classic DOSBox but should work for DOSBox-X as well.</li>
+</ul>
+</li>
+</ol>
+<h1 id="tweaks">Tweaks</h1>
+<h2 id="gpio-soldering">GPIO soldering</h2>
+<p>My kit came with a case that seems like it&rsquo;d be difficult to remove the Pi from, so I soldered the GPIO headers into the board before I put it into the case. This was my first experience soldering, as I received a solder kit this past Christmas. It was a bit of a pain because I don&rsquo;t have a clamp to hold things together, but someone in an <a href="https://mewe.com/group/5be39b2273cd9f0ce95b40f0">SBC group on MeWe</a> suggested slotting the GPIO pins into a breadboard and placing the Zero 2 W on top that way. It still wasn&rsquo;t easy until I got both ends of the headers soldered in but it worked fine after that.</p>
+<p>The reason I did this was future-proofing, as I might want to set up other physical tweaks to the system at some point. That, and if I decide I need to wipe this project and use it for something more practical, it&rsquo;d be easier in case I need those GPIO pins.</p>
+<h2 id="networking">Networking</h2>
+<p>In addition to DOSBox-X, I also installed SyncTerm (<code>sudo apt install syncterm</code>) so that I could dial in to bulletin boards. I figured, if I want this project to give me that 90s computing experience, I&rsquo;d want to have the ability to use BBSes. Sure, bulletin boards were on their way out by the mid 90s and I didn&rsquo;t have any experience with them as a kid, but I can&rsquo;t easily get onto the web with this system so this is a fun alternative to explore.</p>
+<h2 id="terminal-change">Terminal change</h2>
+<p>I changed the typeface for the Linux command line in PiOS Lite, as I wanted it to be a little closer to the look of DOSBox-X to preserve the retro feel and to not be quite as jarring when going between DOSBox-X and the Linux CLI.</p>
+<p>To do this, first, I tested a couple different fonts before I committed to one; I used this command to test them:</p>
+<p><code>sudo setfont /usr/share/consolefonts/[fontname]</code></p>
+<p>I settled on using <a href="https://terminus-font.sourceforge.net/"><strong>Terminus</strong></a>, as it had a bold 16x32 option, which would come close to what I wanted. Once I decided on that, I ran the following commands to backup the original file and then set the font to be used on boot:</p>
+<pre tabindex="0"><code>sudo cp /etc/default/console-setup /home/[username]/backup
+sudo nano /etc/default/console-setup
+</code></pre><p>Once Nano opens the file, you need to change the <code>FONTFACE</code> and <code>FONTSIZE</code> options. I opted for these:</p>
+<pre tabindex="0"><code>FONTFACE=&#34;TerminusBold&#34;
+FONTSIZE=&#34;16x32&#34;
+</code></pre><p>From there, once you reboot, the font should be much larger and a bit closer to the default font in MS-DOS, though you&rsquo;ll get occasional color in the PiOS Lite CLI rather than the monochrome of DOS. If you prefer to go back, compare the text in the backup you made and change the <code>FONTFACE</code> and <code>FONTSIZE</code> attributes back to what they were originally.</p>
+<h2 id="windows-installations">Windows installations</h2>
+<p>I set up both <strong>Windows 2.03</strong> and <strong>Windows 3.1</strong> on this system. Windows 3.1 was actually my first operating system when I was very young. I didn&rsquo;t use it for long, as my dad upgraded my PC to Windows 98 not long after its release (not sure why he skipped 95), but even so, 3.1 left a buried mark on my memory and it&rsquo;s lighter on system resources than 95 or 98 are.</p>
+<p>Setting up 2.03 wasn&rsquo;t difficult at all: it was just a matter of copy-pasting the files into a directory and running the .BAT file that came with it. It could be because I obtained the files from an Internet Archive page that has an in-browser emulation option, but it really was that simple for me. I never used versions before Windows 3, so I don&rsquo;t know how close that is to the actual process.</p>
+<p>As for 3.1, that wasn&rsquo;t quite as simple. Like I did for the files for 2.03, I used the Internet Archive and the page I found came with six .IMG files only; I assume these are direct images of the floppy disks from an original box installation. I had to do some research on how to install from this setup but ended up getting it up and running with these steps:</p>
+<ol>
+<li>Within PiOS, create a dedicated <strong>INSTALL</strong> folder inside the folder where you&rsquo;re storing the image files (it needs to be within the DOSBox mount directory from earlier). Also create a dedicated <strong>WINDOWS</strong> folder within your mount directory wherever you want to be launching Windows 3.1 from.
+<ol>
+<li>For example, <code>mkdir /home/[username]/dos/winimage/INSTALL</code> for the <strong>INSTALL</strong> folder and then <code>mkdir /home/[username]/dos/WINDOWS</code> for the <strong>WINDOWS</strong> folder.</li>
+</ol>
+</li>
+<li>Launch DOSBox-X, mount your base directory and navigate to the folder with the Windows 3.1 image files.</li>
+<li>Run <code>IMGMOUNT A [NAME].IMG</code></li>
+<li>CD to the <strong>INSTALL</strong> directory and run <code>COPY A:\*.*</code></li>
+<li>CD up once to the image file directory and run <code>IMGMOUNT A -U</code></li>
+<li>From here, you&rsquo;ll need to repeat the process of steps 3-5 for every image file. <em>This part of the process is done entirely within DOSBox-X</em>.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+<div class="alert alert-important" >
+  <div class="alert-header" >
+    <span class="alert-icon">
+      
+      
+      <svg style="width: 1.25em; height: 1.25em; vertical-align: text-bottom; margin-right: 0.2rem;"
+  class="admonition-favicon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"
+  stroke-linecap="round" stroke-linejoin="round">
+  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+  <line x1="12" y1="9" x2="12" y2="13"></line>
+  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+</svg>
+      
+      
+    </span>
+    <span class="alert-title">
+      
+      Important
+      
+    </span>
+    
+  </div>
+  <div class="alert-content" id="alert-0" >
+    <p>When doing the copy process, you <strong>must</strong> make sure that you CD back into the <strong>INSTALL</strong> directory every time you change image files. You want to make sure all of the files copied from those image files will be placed within the <strong>INSTALL</strong> directory.</p>
+  </div>
+</div>
+<p>Once you have all the image files&rsquo; contents copied to the <strong>INSTALL</strong> directory, CD back to that directory and run <strong>SETUP.EXE</strong>. From here, the process is relatively simple for anyone who has installed an operating system. When you get to the part of the installer for printer setup, just select &ldquo;No Printer Attached&rdquo;. If you were installing 3.1 on period hardware, it would be feasible to mess around with this part of the process but you&rsquo;re not going to need or be able to set this up with this particular build. You&rsquo;ll also want to be sure that you set the installation path to your <strong>WINDOWS</strong> directory that you set up in step 1.</p>
+<p>You&rsquo;re going to have to &lsquo;reboot&rsquo;, which will take you back to the command line. Navigate to the <strong>WINDOWS</strong> directory and type <code>WIN</code> to start Windows 3.1.</p>
+<h3 id="using-windows-31">Using Windows 3.1</h3>
+<p>After setup is finished, there&rsquo;s a pretty solid tutorial for helping you navigate the GUI. If you&rsquo;ve never used it before, it takes some getting used to, as Windows 3.1 runs differently than every other Windows version from 95 onward. First of all, there&rsquo;s no start menu or taskbar. Second, most window management occurs within a dedicated program called <strong>Program Manager</strong>.</p>
+<p>You&rsquo;re likely going to have better luck launching games directly from DOSBox-X. As it stands, you&rsquo;d need to mess with sound and display drivers if you want to use 3.1 as your &lsquo;home base&rsquo; with this project, which isn&rsquo;t something I&rsquo;ve done as of this blog post. I might return later and try to mess with drivers if I can find appropriate ones but for now, launching games direct through DOSBox-X is acceptable to me and I can just use 3.1 for fun and the added nostalgia, and maybe even some retro software if they don&rsquo;t require specific drivers.</p>
+<h1 id="final-thoughts">Final thoughts</h1>
+<p>This may not be the most practical build ever, nor is it good for a complete beginner, but it is a lot of fun if you have nostalgia for or interest in retro computing. Sure, you <em>can</em> just run DOSBox-X on your current PC. Sure, you <em>could</em> go scrounging for retro hardware and set up a system that way.</p>
+<p>However, with the former, you&rsquo;re missing out on having a dedicated machine to go to when you want to have a throwback experience. The addition of using PiOS Lite for this project also ensures everything remains within a command line and period-accurate GUIs, adding to the immersion of the project.</p>
+<p>As for the latter, it&rsquo;s far more expensive and challenging to hunt down and build retro hardware. It also requires a lot more skill to do, both at the hardware and software level, and even though I grew up during a more challenging era of computer builds, my dad always handled that when I was young. Even watching a bunch of <a href="https://www.youtube.com/@LGR">LGR</a> (my favorite Youtube channel) isn&rsquo;t going to fully prepare you for just how challenging it is to go the retro hardware route. Not to mention the fact that you&rsquo;d need to either do some further tweaks or hunt down physical copies of the games and software you want to use on it, and that&rsquo;s <em>if</em> you manage to get all the drivers set up correctly and judge the hardware requirements properly.</p>
+<p>This project is a fantastic middle ground between those two options. You get the immersion of having a dedicated system that&rsquo;s almost exclusively based in a command line, but with the modern convenience aspect of not having to go through the pain and price of building an actual retro system. The form factor of the Zero 2 W also means you can set it up with an HDMI switch box and just switch between it and your standard display on your PC, rather than having to have a specific area for the system, though again: that does somewhat defeat the immersion of having a dedicated retro system.</p>
+<p>Altogether, this was a fun way to kick off my exploration of Raspberry Pi and it won&rsquo;t be the last project I talk about here!</p>
+
+      </div>
+
+      
+        <footer class="post-footer">
+          <div class="post-tags-footer">
+            <span class="tags-label">Tags:</span>
+            
+              <a href="/tags/raspberrypi" class="post-tag">raspberrypi</a>
+            
+              <a href="/tags/homelab" class="post-tag">homelab</a>
+            
+              <a href="/tags/project" class="post-tag">project</a>
+            
+              <a href="/tags/retro" class="post-tag">retro</a>
+            
+          </div>
+        </footer>
+      
+
+      
+
+
+<section class="related-posts" aria-label="Related Posts">
+  <h2 class="related-posts-title">Related Posts</h2>
+  <ul class="related-posts-list">
+    
+    <li class="related-post-item">
+      <a href="/posts/posts/an-unnecessarily-complicated-framework/" class="related-post-link">
+        <strong>An Unnecessarily Complicated Framework: my blog pipeline</strong>
+        <span>If you&rsquo;re reading this blog, chances are that you don&rsquo;t realize how complicated things are behind the …</span>
+      </a>
+    </li>
+    
+    <li class="related-post-item">
+      <a href="/posts/posts/network-nightmare---troubleshooting-tales-1/" class="related-post-link">
+        <strong>Network Nightmare [Troubleshooting Tales #1]</strong>
+        <span>In over eight months of using Manjaro Linux as my daily driver, I&rsquo;ve encountered a handful of oddities and issues …</span>
+      </a>
+    </li>
+    
+  </ul>
+</section>
+
+
+
+      <nav class="post-navigation" aria-label="Post navigation">
+        
+          <a
+            href="/posts/posts/an-unnecessarily-complicated-framework/"
+            class="nav-link nav-prev"
+            aria-label="Previous post: An Unnecessarily Complicated Framework: my blog pipeline">
+            <span class="nav-label">Previous</span>
+            <span class="nav-title">An Unnecessarily Complicated Framework: my blog pipeline</span>
+          </a>
+        
+
+        
+      </nav>
+    </article>
+
+    
+  <aside class="post-toc" id="post-toc" aria-label="Table of Contents">
+    <button
+      class="toc-toggle"
+      id="toc-toggle"
+      aria-expanded="true"
+      aria-controls="toc-content"
+      aria-label="Toggle table of contents">
+      <svg
+        class="toc-burger-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <span class="toc-toggle-text">Table of Contents</span>
+      <svg
+        class="toc-chevron-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="toc-content" id="toc-content">
+      <nav class="toc-nav" aria-label="Table of Contents">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#system-overview">System Overview</a></li>
+    <li><a href="#build-process">Build process</a></li>
+    <li><a href="#tweaks">Tweaks</a>
+      <ul>
+        <li><a href="#gpio-soldering">GPIO soldering</a></li>
+        <li><a href="#networking">Networking</a></li>
+        <li><a href="#terminal-change">Terminal change</a></li>
+        <li><a href="#windows-installations">Windows installations</a>
+          <ul>
+            <li><a href="#using-windows-31">Using Windows 3.1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#final-thoughts">Final thoughts</a></li>
+  </ul>
+</nav>
+      </nav>
+    </div>
+  </aside>
+
+
+  </div>
+
+    </main>
+
+    <footer>
+      <footer class="site-footer">
+  <div class="footer-content">
+    <p class="footer-text">
+      &copy;
+      
+      2026
+      
+      TenshiNet.
+      
+        Built with Hugo and Mana theme
+      
+    </p>
+    
+      <div class="footer-social">
+        <div class="social-links">
+  
+    <a
+      href="https://github.com/tenshi-net"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-link"
+      aria-label="GitHub">
+      <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          fill-rule="evenodd"
+          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </a>
+  
+
+  
+
+  
+
+  
+
+  
+    <a href="mailto:tenshinet@proton.me" class="social-link" aria-label="Email">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+      </svg>
+    </a>
+  
+  
+</div>
+
+      </div>
+    
+  </div>
+</footer>
+
+    </footer>
+
+    <div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Search" data-no-results="No results found">
+  <div class="search-modal-backdrop" id="search-modal-backdrop"></div>
+  <div class="search-modal-container">
+    <div class="search-input-wrapper">
+      <svg class="search-input-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+      <input
+        type="search"
+        id="search-input"
+        class="search-input"
+        placeholder="Search..."
+        autocomplete="off"
+        aria-label="Search">
+      <button class="search-input-clear" id="search-input-clear" aria-label="Clear search">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+        </svg>
+      </button>
+      <button class="search-modal-close" id="search-modal-close" aria-label="Close search">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>
+
+    
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu-content">
+    <div class="mobile-menu-header">
+      <span class="mobile-menu-title">Menu</span>
+      <button
+        id="mobile-menu-close"
+        class="mobile-menu-close"
+        aria-label="Close menu"
+        type="button">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-nav" role="navigation" aria-label="Mobile navigation">
+      <ul class="menu-list">
+  
+    <li class="menu-item">
+      <a
+        href="/"
+        class="menu-link ">
+        Home
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="/posts/"
+        class="menu-link ">
+        Posts
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="/about/"
+        class="menu-link ">
+        About
+      </a>
+    </li>
+  
+</ul>
+
+    </nav>
+    <div class="mobile-menu-footer">
+      <button id="mobile-search-toggle" class="mobile-search-toggle" aria-label="Search" type="button">
+        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <span>Search</span>
+      </button>
+      
+
+      <button class="theme-toggle" aria-label="Toggle theme" type="button">
+        <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+    
+
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" type="button">
+  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+  </svg>
+</button>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.137938305a4255a5ce0531471a42b4448c4adb05e04052a70000719c0704d082.js" defer></script>
+
+  </body>
+</html>

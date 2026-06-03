@@ -6,8 +6,15 @@
     <description>Recent content in Posts on TenshiNet</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Raspberry Pi MS-DOS Build</title>
+      <link>http://localhost:1313/posts/posts/pi-msdos-build/</link>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/posts/pi-msdos-build/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;&#xA;&lt;p&gt;As a &amp;lsquo;young&amp;rsquo; Millennial, I grew up in the late 90s and early 2000s. Even then, for a variety of reasons, my family often lagged a generation behind on tech. As such, I grew up on late MS-DOS games alongside early Windows games, and due to nostalgia and my growing interest in the fundamental ways computers work, I&amp;rsquo;ve developed a greater interest in retro computers and games.&lt;/p&gt;&#xA;&lt;p&gt;Over the early months of 2026, I also found myself developing an interest in single-board computers (Raspberry Pi) and microcontrollers, but I needed a basic project that I could start off with, so I decided to give this a try. I really want to get into retro computing proper, but it&amp;rsquo;s not a cheap hobby by any means. Instead, I decided to combine these two recent interests as a starter Pi project and build a &amp;ldquo;nostalgia box&amp;rdquo; to relive some level of my early childhood experiences on PC!&lt;/p&gt;</description>
+    </item>
     <item>
       <title>An Unnecessarily Complicated Framework: my blog pipeline</title>
       <link>http://localhost:1313/posts/posts/an-unnecessarily-complicated-framework/</link>
