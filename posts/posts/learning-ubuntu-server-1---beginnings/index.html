@@ -395,30 +395,30 @@
 <h2 id="information-on-the-network-interface">Information on the Network Interface</h2>
 <p>Next, he teaches the command <code>lshw -class network</code>, ran as superuser, and runs through some of the fields that are listed.</p>
 <table>
-  <thead>
-      <tr>
-          <th>Field</th>
-          <th>Explanation</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Description</td>
-          <td>Tells the user what the interface is. In this VM, it shows up as &ldquo;Ethernet interface&rdquo; but Dan explains that it may shift to &ldquo;Fiber interface&rdquo; if you&rsquo;re using a fiber connection.</td>
-      </tr>
-      <tr>
-          <td>Logical name</td>
-          <td>Shows the interface logical name again; once again, in my case, it&rsquo;s <code>enp0s3</code>.</td>
-      </tr>
-      <tr>
-          <td>Size</td>
-          <td>Indicates the bandwidth that was negotiated between this device and the uplink device. In my case, it&rsquo;s 1Gbit/s.</td>
-      </tr>
-      <tr>
-          <td>Configuration</td>
-          <td>Lists configuration data for the interface. Dan makes note that you can see what driver version is used by the interface.</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Field</th>
+					<th>Explanation</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Description</td>
+					<td>Tells the user what the interface is. In this VM, it shows up as &ldquo;Ethernet interface&rdquo; but Dan explains that it may shift to &ldquo;Fiber interface&rdquo; if you&rsquo;re using a fiber connection.</td>
+			</tr>
+			<tr>
+					<td>Logical name</td>
+					<td>Shows the interface logical name again; once again, in my case, it&rsquo;s <code>enp0s3</code>.</td>
+			</tr>
+			<tr>
+					<td>Size</td>
+					<td>Indicates the bandwidth that was negotiated between this device and the uplink device. In my case, it&rsquo;s 1Gbit/s.</td>
+			</tr>
+			<tr>
+					<td>Configuration</td>
+					<td>Lists configuration data for the interface. Dan makes note that you can see what driver version is used by the interface.</td>
+			</tr>
+	</tbody>
 </table>
 <h2 id="configuring-static-ip">Configuring Static IP</h2>
 <p>Dan starts by explaining what a <strong>static IP</strong> is (&ldquo;a fixed IP address that&rsquo;s manually assigned to a device, such as a server, and it remains constant unless it&rsquo;s manually changed&rdquo;) and compares that to a <strong>dynamic IP</strong> and DHCP. He also explains how the usage of a static IP is crucial for devices such as servers to be accessible by others.</p>

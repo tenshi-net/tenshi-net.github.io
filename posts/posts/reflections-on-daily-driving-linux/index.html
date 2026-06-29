@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en-us" class="h-full">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="en-us">
+<meta name="theme-color" content="#BD5FFF">
+<script>
+  
+  (function () {
+    const storedTheme = localStorage.getItem("theme");
+    const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = storedTheme || (systemPrefersLight ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+  
+  (function(){var t=sessionStorage.getItem('mana_pt');if(t){document.documentElement.setAttribute('data-page-enter',t);sessionStorage.removeItem('mana_pt');}})();
+  
+  window.MANA_SEARCH_INDEX_URL = '\/index.json';
+  
+  window.MANA_LANG_PREFIXES = ['en'];
+</script>
+<title>Linux, Eight Months Hence: Reflections on Daily Driving | TenshiNet</title>
+<meta
+  name="description"
+  content="
+    Back in mid October of last year (2025), I made the decision to switch to Linux. This switch was a long time coming, even though I only realized in the last two …
+  
+  ">
+
+
+  <meta name="keywords" content="linux, learning, technology, opinion">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/posts/reflections-on-daily-driving-linux/">
+
+
+<link rel="alternate" hreflang="en-us" href="http://localhost:1313/posts/posts/reflections-on-daily-driving-linux/"><link rel="alternate" hreflang="x-default" href="http://localhost:1313/posts/posts/reflections-on-daily-driving-linux/">
+
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_us">
+<meta property="og:title" content="Linux, Eight Months Hence: Reflections on Daily Driving | TenshiNet">
+<meta property="og:description" content="Back in mid October of last year (2025), I made the decision to switch to Linux. This switch was a long time coming, even though I only realized in the last two …">
+<meta property="og:url" content="http://localhost:1313/posts/posts/reflections-on-daily-driving-linux/">
+<meta property="og:site_name" content="TenshiNet"><meta property="article:published_time" content="2026-06-29T00:00:00Z">
+  <meta
+    property="article:modified_time"
+    content="2026-06-29T00:00:00Z"><meta property="article:section" content="linux"><meta property="article:tag" content="linux"><meta property="article:tag" content="learning"><meta property="article:tag" content="technology"><meta property="article:tag" content="opinion">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Linux, Eight Months Hence: Reflections on Daily Driving | TenshiNet">
+<meta name="twitter:description" content="Back in mid October of last year (2025), I made the decision to switch to Linux. This switch was a long time coming, even though I only realized in the last two …">
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+  
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","email":"tenshinet@proton.me","name":"TenshiNet","sameAs":["https://github.com/tenshi-net"]},"dateModified":"2026-06-29T00:00:00Z","datePublished":"2026-06-29T00:00:00Z","description":"Back in mid October of last year (2025), I made the decision to switch to Linux. This switch was a long time coming, even though I only realized in the last two …","headline":"Linux, Eight Months Hence: Reflections on Daily Driving","image":"http://localhost:1313/images/transparent-logo.png","inLanguage":"en-us","keywords":["linux","learning","technology","opinion"],"mainEntityOfPage":{"@id":"http://localhost:1313/posts/posts/reflections-on-daily-driving-linux/","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:1313/images/transparent-logo.png"},"name":"TenshiNet","url":"http://localhost:1313/"},"timeRequired":"PT14M","url":"http://localhost:1313/posts/posts/reflections-on-daily-driving-linux/","wordCount":2894}</script>
+
+
+
+  
+  
+  
+    
+  
+  
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Home","position":1},{"@type":"ListItem","item":"http://localhost:1313/posts/","name":"Posts","position":2},{"@type":"ListItem","item":"http://localhost:1313/posts/posts/reflections-on-daily-driving-linux/","name":"Linux, Eight Months Hence: Reflections on Daily Driving","position":3}]}</script>
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+  media="print"
+  onload="this.media='all'">
+<noscript>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</noscript>
+
+<link rel="stylesheet" href="/css/theme.min.29a2f04a9f41258e6c40c77a2b2be43ac8a3a9805c65165860d8b8ec5c442050.css">
+
+
+  <link
+    rel="stylesheet"
+    href="/css/syntax-dark.min.b01037e5609e6260b74d6fcdd6d5131e8dcbc4d46d6ef4bfbe5a60bdfc1a9f30.css"
+    id="syntax-dark-theme"
+    class="syntax-theme">
+  <link
+    rel="stylesheet"
+    href="/css/syntax-light.min.9602bc2fcef52b4c62e05eae14b48ba428e114f116e993e504d83ed5a3aeda98.css"
+    id="syntax-light-theme"
+    class="syntax-theme"
+    disabled><script>
+  
+  (function () {
+    const storedTheme = localStorage.getItem("theme");
+    const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = storedTheme || (systemPrefersLight ? "light" : "dark");
+
+    const syntaxDark = document.getElementById("syntax-dark-theme");
+    const syntaxLight = document.getElementById("syntax-light-theme");
+
+    if (theme === "light") {
+      if (syntaxDark) syntaxDark.disabled = true;
+      if (syntaxLight) syntaxLight.disabled = false;
+    } else {
+      if (syntaxDark) syntaxDark.disabled = false;
+      if (syntaxLight) syntaxLight.disabled = true;
+    }
+
+    
+    const observer = new MutationObserver(() => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      if (currentTheme === "light") {
+        if (syntaxDark) syntaxDark.disabled = true;
+        if (syntaxLight) syntaxLight.disabled = false;
+      } else {
+        if (syntaxDark) syntaxDark.disabled = false;
+        if (syntaxLight) syntaxLight.disabled = true;
+      }
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+  })();
+</script>
+
+
+
+
+<link rel="stylesheet" href="/css/bundle.min.57d6410f7c0fffb9ad468070f9ab22cec491cb85b9a66f072e8cce12fe18b8e0.css">
+
+
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+
+<link rel="icon" type="image/png" href="/favicon.png">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+<link rel="manifest" href="/site.webmanifest">
+
+
+
+
+  
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="/index.xml"
+      title="TenshiNet">
+  
+
+
+
+
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <a href="#main-content" class="skip-to-main" aria-label="Skip to main content"
+      >Skip to main content</a
+    >
+    <header class="sticky-header">
+      <div class="header-container">
+        <nav class="header-nav" role="navigation" aria-label="Main navigation">
+  <div class="header-content">
+    <div class="header-logo">
+      <a href="/" class="logo-link" aria-label="Home - TenshiNet">
+        TenshiNet
+      </a>
+    </div>
+
+    
+    <button 
+      id="mobile-menu-toggle" 
+      class="mobile-menu-toggle" 
+      aria-label="Toggle menu" 
+      aria-expanded="false"
+      type="button">
+      <span class="hamburger-icon">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </span>
+    </button>
+
+    <div class="header-menu">
+      <ul class="menu-list">
+  
+    <li class="menu-item">
+      <a
+        href="/"
+        class="menu-link ">
+        Home
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="/posts/"
+        class="menu-link ">
+        Posts
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="/about/"
+        class="menu-link ">
+        About
+      </a>
+    </li>
+  
+</ul>
+
+
+      <button id="search-toggle" class="search-toggle" aria-label="Search" type="button">
+        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </button>
+
+      
+
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" type="button">
+  <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+  </svg>
+  <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+  </svg>
+</button>
+
+    </div>
+  </div>
+</nav>
+
+      </div>
+      <div class="reading-progress-bar" aria-hidden="true"></div>
+    </header>
+
+    <main id="main-content" class="flex-1" role="main">
+      
+  <div class="single-post-wrapper">
+    <article class="single-post">
+      
+
+
+
+
+
+
+
+      <header class="post-header">
+        
+
+<nav aria-label="breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+      <meta itemprop="position" content="1" />
+      <span aria-hidden="true" class="breadcrumb-sep">›</span>
+    </li>
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="/posts/" itemprop="item"><span itemprop="name">Posts</span></a>
+      <meta itemprop="position" content="2" />
+      <span aria-hidden="true" class="breadcrumb-sep">›</span>
+    </li>
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <span itemprop="name" class="breadcrumb-current">Linux, Eight Months Hence: Reflections on Daily Driving</span>
+      <meta itemprop="position" content="3" />
+    </li>
+  </ol>
+</nav>
+
+
+        <h1 class="post-title-main">Linux, Eight Months Hence: Reflections on Daily Driving</h1>
+
+        
+
+        <div class="post-meta">
+  <div class="post-meta-info">
+    <time datetime="2026-06-29T00:00:00Z" class="post-date">
+      <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+      </svg>
+      June 29, 2026
+    </time>
+
+    <span class="meta-separator">•</span>
+
+    
+      <span class="post-word-count">
+        <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+        2894 words
+      </span>
+    
+
+    
+      <span class="meta-separator">•</span>
+      <span class="post-reading-time">
+        <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        14 min
+      </span>
+    
+  </div>
+
+  
+    <div class="post-tags">
+      
+        <a href="/tags/linux" class="post-tag">linux</a>
+      
+        <a href="/tags/learning" class="post-tag">learning</a>
+      
+        <a href="/tags/technology" class="post-tag">technology</a>
+      
+        <a href="/tags/opinion" class="post-tag">opinion</a>
+      
+    </div>
+  
+</div>
+
+      </header>
+
+      <div class="post-content-main">
+        <p>Back in mid October of last year (2025), I made the decision to switch to Linux. This switch was a long time coming, even though I only realized in the last two years that I&rsquo;d be able to make the switch. I&rsquo;ve talked about my experiences with this migration in <a href="https://tenshi-net.github.io/posts/posts/navigating-linux-distros---my-personal-journey/">previous posts</a>, including the very <a href="https://tenshi-net.github.io/posts/posts/frustrations-humblings-and-revelations---a-second-beginning-on-linux/">rough start</a> I had. However, after a few weeks of adjustment and changing up my workflow, I&rsquo;d like to jot down some thoughts I have in hopes of maybe helping other people realize that Linux is viable for most people in this day and age.</p>
+<h1 id="recap">Recap</h1>
+<p>I wrote that I had some pretty rough experiences after first switching. When I switched, I bought myself a new NVMe SSD to use for my installation; fortunately, this was before the RAMpocalypse so I didn&rsquo;t have to sell a kidney to get one. The benefits to this addition weren&rsquo;t just size and increased speeds over the SATA-based SSDs I was previously using, but it also allowed me to keep my Windows installation intact in case I needed to switch back for some reason. So far, I haven&rsquo;t used my Windows installation ever since I switched, but I keep it as there are some areas that I still have issues with Linux which I can&rsquo;t fix (more on that later).</p>
+<p>I&rsquo;ve also struggled with getting certain peripherals working, an issue with an old wi-fi adapter not having drivers until recent kernels, and so forth. It was a bit of a struggle&hellip; but I&rsquo;ve stuck it out, and I&rsquo;ve overcome the adjustment phase and conquered the supermajority of the issues I was having.</p>
+<h1 id="lessons-on-computing">Lessons on Computing</h1>
+<p>I, and many others in and close to my generation (Millennials), have remarked that using Linux is like rediscovering the wonder we had toward computers back in the 90s and early 2000s. There&rsquo;s something to be said about this and it&rsquo;s not just a matter of breaking free from familiarity. Over time, popular operating systems have striven to become more and more &lsquo;brainless&rsquo;, for lack of a better word, and things are only going to get worse in this regard with how these operating systems are constantly pushing AI features into the OS. After all, why would anyone who&rsquo;s not a computer geek <strong>want</strong> to have a hands-on experience of tinkering with their systems? Many just want their computers to know what they want it to do before they even know they want to do it.</p>
+<p>And don&rsquo;t get me wrong, in some ways, that&rsquo;s not a bad thing. Microsoft focused on the accessibility aspect when they started developing Windows. Windows 95 took this to new levels, with features like Plug-n-Play, the intuitive GUI and so forth. If computers never became accessible to the non-technical masses, we&rsquo;d be a vastly different society, in both good and bad ways (mostly bad).</p>
+<p>The problem is that, with time, operating systems have grown so familiar and so &lsquo;dumbed down&rsquo; that you don&rsquo;t have to truly <strong>learn</strong> how to use a computer anymore. Ironically, we went from &ldquo;computers are a magic box&rdquo; to &ldquo;I use a computer for everything&rdquo; back to &ldquo;computers are a magic box&rdquo;, especially since smartphones became the dominant technology, but we&rsquo;ve managed to go from magic (meaning <em>wonder</em>) to magic (meaning <em>sorcery beyond comprehension</em>), at least for the majority of younger folks.</p>
+<p>On top of this, all commercial operating systems hold your hand and do all the work for you. Again, I&rsquo;m not saying that&rsquo;s inherently a bad thing, but as someone who grew up when computers still had that air of mystery and wonder to them, losing that form of magic has really caused me to take technology for granted as life went on.</p>
+<p><em><strong>Linux has done the opposite to me.</strong></em></p>
+<p>In the few years I&rsquo;ve been learning and tinkering with Linux on the side, I&rsquo;ve seen so many ways that we&rsquo;ve been doing things wrong. I&rsquo;ve seen so many ways that I&rsquo;ve taken for granted simple aspects of computing, such as how visuals are displayed or how drivers work. I&rsquo;ve seen so many ways that I&rsquo;ve been missing out on the true <strong>freedom</strong> that personal computing used to offer people. I mean, seriously, Linux lets you do just about <em>anything</em> you want to do with your system! Meanwhile, commercial operating systems continually tell you things you <strong>can&rsquo;t</strong> do. I&rsquo;ve also taken for granted the ease of troubleshooting with the rise of AI and the internet, both of which are resources that we&rsquo;ve gotten far too used to having in our life. We need to start appreciating them a bit more. They&rsquo;re wondrous innovations!</p>
+<p>I&rsquo;ve seen all of that thanks to using Linux, and that facet of understanding has grown since I&rsquo;ve begun daily driving it. It has inspired me to take time to marvel at just how miraculous this technology can be, and to reflect on just how far we&rsquo;ve come in less than a century of development of modern computing.</p>
+<h1 id="workflow-enhanced">Workflow Enhanced</h1>
+<p>One aspect of this switch to Linux that has been incredible is how it changed up my workflow significantly. On Windows, I had a cadence to everything I did. Built up over literally a lifetime of using different versions of Windows, I had a very specific way that I did things and this was something that really worried me: <em>would I be able to reach a similar level of efficiency and smoothness, even with a Windows-like desktop environment like KDE Plasma?</em></p>
+<p>At first, it seemed like the answer was going to be a firm <strong>no</strong>. Most of my workflow could be replicated but not entirely. A major reason I wanted a distro that supported Plasma was because Plasma had most of the features I needed built into the desktop environment. From the similarities between Kate and Notepad++, to the comparisons between KRunner and FlowLauncher, to the start menu itself and its slight similarities to Windows 10&rsquo;s start menu&hellip; in most cases, I was able to replicate it.</p>
+<p>However, I found myself encountering strange quirks that I couldn&rsquo;t seem to get around, such as the way window maximizing works on some applications in certain window managers, to the inability to tweak the location of icons on the system tray, and so forth. Mostly minor annoyances, but still, annoying enough to make my workflow feel noticeably different.</p>
+<p>What I did find, however, is that my workflow is now a lot <strong>smoother</strong> as a whole as a result of an ecosystem of free and open source applications literally designed to work together. Naturally, it doesn&rsquo;t hurt that the QT design language on Plasma is particularly appealing, as many of my applications now have a unified design language which is actually underrated when it comes to focus: switching between applications which all use the same design language makes it less jarring and thus has a minuscule (albeit important) impact on focus.</p>
+<p>I&rsquo;ve been using open source applications for most of my life, but only in recent years did I start experimenting with replacing vast swaths of tools in Windows with open source alternatives. While this was a positive for privacy (even if Windows, itself, is a privacy nightmare), switching over to Linux has made me realize just how much smoother and more &lsquo;right&rsquo; things feel when you&rsquo;re using an operating system, desktop environment and tool suite that are all part of the vast, open source community.</p>
+<h2 id="minor-note-ricing-rocks">Minor note: ricing rocks</h2>
+<p>I also can&rsquo;t help but talk a bit about how the absurd levels of customization present in KDE Plasma have changed the way I use GUIs as a whole.</p>
+<p>I kept the traditional &rsquo;task bar&rsquo; approach present on Windows but added some widgets to it, and on my secondary screen, I created a new panel that contains a clock, the peek-at-desktop widget, a media controls widget and the list of running applications takes on a more classic wide button view instead of the compact, more squared approach on my main taskbar. I also placed this panel at the top of the screen for quick switching between programs and browser tabs with minimal mouse movement.</p>
+<p>Not only this, but the overall aesthetic possibilities of a desktop environment like Plasma are incredible. There are countless theme packs, individual tweaks, even tools like Kvantum which let you create a GUI that is genuinely beautiful to look at with all sorts of blur effects, transparency and so forth.</p>
+<h1 id="the-good-the-bad-and-the-ugly-of-gaming">The Good, the Bad and the Ugly (of gaming)</h1>
+<p>I mentioned before that I ended up deciding to keep a Windows installation on my system, at least for the time being. As much as I had wanted to abandon Windows entirely (except from Bushwacker, one of my lab laptops, which runs Windows 11), I found that some games simply don&rsquo;t play nice on Linux, no matter how many tweaks I try or what Proton versions I switch to. I&rsquo;m not even talking about games with kernel anti-cheat, either: there have been some games that have gold or platinum ratings on ProtonDB, yet they just do not cooperate on my system. That&rsquo;s actually one of the things that frustrate me the most about the Linux experience so far. I&rsquo;ve managed to get most of my games running at an acceptable state but having that Windows installation still intact ensures that, at least for the time being, I could theoretically install the problematic games there and just dual boot for a while. I haven&rsquo;t done that so far, but I&rsquo;ve left it as an option.</p>
+<p>Fortunately, the majority of games I play <strong>do</strong> run on Linux. Many of them run without any tweaks whatsoever, just the default Proton version. In a lot of ways, I&rsquo;ll say that Linux gaming is in a shockingly good state nowadays, as I expected to have to tweak and configure a lot more than I&rsquo;ve had to. On the flip side, though, it&rsquo;s beyond frustrating to me that games I love, games which I was led to believe would work fine judging by the ProtonDB reports, have major issues on my setup. I realize that certain hardware configurations and certain distros may have better luck with games than others, and considering how I&rsquo;m using an Arch-based distro, I shouldn&rsquo;t be entirely shocked to see some games don&rsquo;t want to work properly.</p>
+<p>Even so, between my experiences with my Steam Deck (which I purchased in late 2024) and my primary PC&rsquo;s Linux distribution, I&rsquo;ve grown to genuinely love the way Linux gaming works. Like I said, the majority of games I play work fine without any configuration whatsoever. The ones I do have to tweak are usually solved by changing Proton versions (<a href="https://github.com/GloriousEggroll/proton-ge-custom">shout out to GloriousEggroll</a>) or adding launch options. All of these experiences, despite sounding like a pain, are actually enjoyable to me as a tinkerer. They remind me of the days when PCs weren&rsquo;t so easy to pick up and run with. They keep my troubleshooting abilities honed.</p>
+<h1 id="a-better-existence">A Better Existence</h1>
+<p>This isn&rsquo;t meant to necessarily be a hit piece on mainstream, proprietary operating systems. It is, however, impossible to forget to acknowledge the fact that Linux does so many things in significantly better ways than many proprietary operating systems do.</p>
+<p>The obvious aspect of this is the free and open source part. No need to shell out $140. No need to pay more with your data. No need to worry about shifty, hidden stuff in updates. No concerns about your operating system telling you &ldquo;no&rdquo; when you command it to do something.</p>
+<p><em><strong>Just download, install, go.</strong></em></p>
+<p>When you have the money and desire to do so, you can donate. And, in fact, I highly admonish everyone consider donating to their favorite FOSS projects, because that&rsquo;s how we win: we work together, contribute, and donate if we can, even if it&rsquo;s only a few dollars here and there.</p>
+<p>It goes beyond that, though. There are myriad ways that Linux can improve your computing life as a whole.</p>
+<p>One such example is how software management is handled. On Windows, everyone knows you generally Google a piece of software, find the official download page, and download a <code>.exe</code> file. This is simple and easy, sure, but with SEO poisoning and session hijacking, this is inherently risky. There&rsquo;s a reason modern phones use app stores, and it&rsquo;s not just for convenience or control: there&rsquo;s a lot more security in a repository-based design. It&rsquo;s certainly not perfect, but with Linux having a &lsquo;software store&rsquo; approach managed by a distribution or community, there are a lot more eyes on what&rsquo;s going on, meaning it&rsquo;s more challenging to sneak malware onto users&rsquo; systems (<a href="https://www.bleepingcomputer.com/news/security/over-400-arch-linux-packages-compromised-to-push-rootkit-infostealer/">AUR malware campaigns withheld</a>).</p>
+<p>Now, to be fair, Windows has made strides toward this model: <a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/">Winget</a> is promising, the Microsoft Store has potential and <a href="https://chocolatey.org/">Chocolatey</a> is a long-running and mature CLI-based repository. Moreover, Linux isn&rsquo;t <strong>perfect</strong> in this regard: a singular repository is a singular point of failure, which is one of a few reasons why multiple package formats exist on Linux.</p>
+<p>On that subject, Linux having so many package formats is actually pretty great. Sure, you can stick with just the default, native packages for your distro (and I recommend prioritizing those) but there&rsquo;s so much more out there and reasons to use them! Flatpak&rsquo;s sandboxing is great: it avoids the possibility of so-called &ldquo;dependency hell&rdquo; and it also makes it possible to control what programs are able to do on your system, managed via Flatseal. Meanwhile, package formats like AppImage give you portability, allowing you to use that same exact program on different systems without having to actually install anything. There are also others like Canonical&rsquo;s Snaps, but those are often maligned by Linux users and they don&rsquo;t really do anything that Flatpak can&rsquo;t do. Of course, there are caveats to each file format (EG: Flatpak and AppImage both take significantly more storage space due to sandboxing and the way they bundle dependencies).</p>
+<p>Of course, because of the &lsquo;software store&rsquo; approach, keeping applications updated on Linux is an absolute breeze. Update through the CLI or your distro&rsquo;s software manager GUI and you can easily keep things updated without having to manually download updated applications like you do on Windows (if you&rsquo;re not using a package manager like Winget/Chocolatey).</p>
+<p>This ease of updating also plays into the common-held belief that Linux is more secure than Windows. While it&rsquo;s not at all impervious to malware, Linux <strong>is</strong> inherently a bit more secure by default due to how things typically run with lower privilege by default. On the other hand, Windows tends to default user accounts to administrator accounts, which means most applications run with elevated privileges by default. On the flip side, Linux requires you to elevate to superuser privileges (the <code>sudo</code> you often see in Linux commands) in order to undertake tasks that make changes to system configuration and high-security operating system features. That, along with the easier updates, and the way you obtain software in the first place, it all comes together with a lower market share to keep Linux systems largely devoid of malware. Still, practice good security hygiene, especially if you&rsquo;re using third-party repos like the AUR or running shell commands or ccscripts you find online.</p>
+<h1 id="looking-ahead">Looking Ahead</h1>
+<p>As I mentioned in the gaming section, I have my Windows installation set up for dual booting if I need it. I&rsquo;ll probably format that drive at some point down the road and add it to my Linux storage but I view it as a safety net for now, on the off chance that I find a game that I just can&rsquo;t run on Linux.</p>
+<p>However, for the most part, I&rsquo;m thoroughly thrilled to have been daily driving Linux for the better half of a year. As a lifelong computer geek, cybersecurity professional (in training) and recent fan of SBCs like Raspberry Pi, using Linux on a daily basis has quickly built my abilities with Linux while also teaching me so much about computing, and it frees me from having to rely so heavily on Big Tech. It&rsquo;s literally nothing but a win.</p>
+<p><em><strong>Once I got past the adjustment phase, it has been an absolute blast and I can&rsquo;t wait to see where things are 5+ years from now.</strong></em></p>
+<p>If you&rsquo;re considering trying Linux, but you&rsquo;re scared it will be too challenging for you to get into, I urge you to take your time. <em>Ease yourself into it</em>. Learn on virtual machines, where you can break things safely. Set up a thumb drive with <a href="https://youtu.be/CuonyS3xdwg">Ventoy</a> so you can play around with the live environment for different distros on your system&rsquo;s raw hardware (don&rsquo;t install until you&rsquo;re ready to switch). Find a few Linux-related channels that you are able to hang with; I recommend <a href="https://www.youtube.com/channel/UC1s1OsWNYDFgbROPV-q5arg">Michael Horn</a> and <a href="https://www.youtube.com/channel/UCld68syR8Wi-GY_n4CaoJGA">Brodie Robertson</a>, but there are plenty of other great channels to try. You could also watch Switch and Click&rsquo;s <a href="https://www.youtube.com/playlist?list=PLBR0VsVaBX7qop6gXWdGcpnx5OFAPGS4x">Linux Journey</a> playlist, where you get to see a total newcomer experiment with and learn Linux in its various aspects.</p>
+<p>On top of that, try checking out the many different free Linux courses on Youtube, even if they don&rsquo;t seem to be something you&rsquo;re initially interested in. For example, NetworkChuck&rsquo;s <a href="https://youtube.com/playlist?list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL">&ldquo;Linux for Hackers&rdquo; course</a> is a fantastic introduction to how you use a Linux CLI, even if you&rsquo;re not interested in hacking/cybersecurity.</p>
+
+
+
+
+
+
+
+
+<blockquote class="blockquote-regular">
+  <p><em><strong>There&rsquo;s no rush, here. Try things at your pace and enjoy the ride!</strong></em></p>
+
+</blockquote>
+
+      </div>
+
+      
+        <footer class="post-footer">
+          <div class="post-tags-footer">
+            <span class="tags-label">Tags:</span>
+            
+              <a href="/tags/linux" class="post-tag">linux</a>
+            
+              <a href="/tags/learning" class="post-tag">learning</a>
+            
+              <a href="/tags/technology" class="post-tag">technology</a>
+            
+              <a href="/tags/opinion" class="post-tag">opinion</a>
+            
+          </div>
+        </footer>
+      
+
+      
+
+
+<section class="related-posts" aria-label="Related Posts">
+  <h2 class="related-posts-title">Related Posts</h2>
+  <ul class="related-posts-list">
+    
+    <li class="related-post-item">
+      <a href="/posts/posts/an-unnecessarily-complicated-framework/" class="related-post-link">
+        <strong>An Unnecessarily Complicated Framework: my blog pipeline</strong>
+        <span>If you&rsquo;re reading this blog, chances are that you don&rsquo;t realize how complicated things are behind the …</span>
+      </a>
+    </li>
+    
+    <li class="related-post-item">
+      <a href="/posts/posts/network-nightmare---troubleshooting-tales-1/" class="related-post-link">
+        <strong>Network Nightmare [Troubleshooting Tales #1]</strong>
+        <span>In over eight months of using Manjaro Linux as my daily driver, I&rsquo;ve encountered a handful of oddities and issues …</span>
+      </a>
+    </li>
+    
+  </ul>
+</section>
+
+
+
+      <nav class="post-navigation" aria-label="Post navigation">
+        
+          <a
+            href="/posts/posts/pihole-on-old-hardware/"
+            class="nav-link nav-prev"
+            aria-label="Previous post: Running Pi-Hole on old hardware">
+            <span class="nav-label">Previous</span>
+            <span class="nav-title">Running Pi-Hole on old hardware</span>
+          </a>
+        
+
+        
+      </nav>
+    </article>
+
+    
+  <aside class="post-toc" id="post-toc" aria-label="Table of Contents">
+    <button
+      class="toc-toggle"
+      id="toc-toggle"
+      aria-expanded="true"
+      aria-controls="toc-content"
+      aria-label="Toggle table of contents">
+      <svg
+        class="toc-burger-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <span class="toc-toggle-text">Table of Contents</span>
+      <svg
+        class="toc-chevron-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="toc-content" id="toc-content">
+      <nav class="toc-nav" aria-label="Table of Contents">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#recap">Recap</a></li>
+    <li><a href="#lessons-on-computing">Lessons on Computing</a></li>
+    <li><a href="#workflow-enhanced">Workflow Enhanced</a>
+      <ul>
+        <li><a href="#minor-note-ricing-rocks">Minor note: ricing rocks</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-good-the-bad-and-the-ugly-of-gaming">The Good, the Bad and the Ugly (of gaming)</a></li>
+    <li><a href="#a-better-existence">A Better Existence</a></li>
+    <li><a href="#looking-ahead">Looking Ahead</a></li>
+  </ul>
+</nav>
+      </nav>
+    </div>
+  </aside>
+
+
+  </div>
+
+    </main>
+
+    <footer>
+      <footer class="site-footer">
+  <div class="footer-content">
+    <p class="footer-text">
+      &copy;
+      
+      2026
+      
+      TenshiNet.
+      
+        Built with Hugo and Mana theme
+      
+    </p>
+    
+      <div class="footer-social">
+        <div class="social-links">
+  
+    <a
+      href="https://github.com/tenshi-net"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-link"
+      aria-label="GitHub">
+      <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          fill-rule="evenodd"
+          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </a>
+  
+
+  
+
+  
+
+  
+
+  
+    <a href="mailto:tenshinet@proton.me" class="social-link" aria-label="Email">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+      </svg>
+    </a>
+  
+  
+</div>
+
+      </div>
+    
+  </div>
+</footer>
+
+    </footer>
+
+    <div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Search" data-no-results="No results found">
+  <div class="search-modal-backdrop" id="search-modal-backdrop"></div>
+  <div class="search-modal-container">
+    <div class="search-input-wrapper">
+      <svg class="search-input-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+      <input
+        type="search"
+        id="search-input"
+        class="search-input"
+        placeholder="Search..."
+        autocomplete="off"
+        aria-label="Search">
+      <button class="search-input-clear" id="search-input-clear" aria-label="Clear search">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+        </svg>
+      </button>
+      <button class="search-modal-close" id="search-modal-close" aria-label="Close search">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>
+
+    
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu-content">
+    <div class="mobile-menu-header">
+      <span class="mobile-menu-title">Menu</span>
+      <button
+        id="mobile-menu-close"
+        class="mobile-menu-close"
+        aria-label="Close menu"
+        type="button">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-nav" role="navigation" aria-label="Mobile navigation">
+      <ul class="menu-list">
+  
+    <li class="menu-item">
+      <a
+        href="/"
+        class="menu-link ">
+        Home
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="/posts/"
+        class="menu-link ">
+        Posts
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="/about/"
+        class="menu-link ">
+        About
+      </a>
+    </li>
+  
+</ul>
+
+    </nav>
+    <div class="mobile-menu-footer">
+      <button id="mobile-search-toggle" class="mobile-search-toggle" aria-label="Search" type="button">
+        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <span>Search</span>
+      </button>
+      
+
+      <button class="theme-toggle" aria-label="Toggle theme" type="button">
+        <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+    
+
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" type="button">
+  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+  </svg>
+</button>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.137938305a4255a5ce0531471a42b4448c4adb05e04052a70000719c0704d082.js" defer></script>
+
+  </body>
+</html>

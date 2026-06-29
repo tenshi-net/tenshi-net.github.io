@@ -1,40 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Homelab on TenshiNet</title>
-    <link>http://localhost:1313/tags/homelab/</link>
-    <description>Recent content in Homelab on TenshiNet</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jun 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Running Pi-Hole on old hardware</title>
-      <link>http://localhost:1313/posts/posts/pihole-on-old-hardware/</link>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/posts/pihole-on-old-hardware/</guid>
-      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;&#xA;&lt;p&gt;When I first started getting into Raspberry Pi and similar technology, it was with an original Pi Model B that was a spare from a family member. I quickly discovered that it would be immensely limited in project potential and I&amp;rsquo;d have to buy more advanced models to do bigger projects (which I did end up buying).&lt;/p&gt;&#xA;&lt;p&gt;At the same time, I knew I wanted to find &lt;strong&gt;some&lt;/strong&gt; use case for this Pi. After I did some research, I learned that installing Pi-Hole would work. Funny enough, I had Pi-Hole as a project idea for a while, as I was researching projects that would be both practical and a good learning experience for security-related fields. As such, it was an easy decision to make that the project for this particular Pi.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>A Raspberry Pi MS-DOS Build</title>
-      <link>http://localhost:1313/posts/posts/pi-msdos-build/</link>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/posts/pi-msdos-build/</guid>
-      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;&#xA;&lt;p&gt;As a &amp;lsquo;young&amp;rsquo; Millennial, I grew up in the late 90s and early 2000s. Even then, for a variety of reasons, my family often lagged a generation behind on tech. As such, I grew up on late MS-DOS games alongside early Windows games, and due to nostalgia and my growing interest in the fundamental ways computers work, I&amp;rsquo;ve developed a greater interest in retro computers and games.&lt;/p&gt;&#xA;&lt;p&gt;Over the early months of 2026, I also found myself developing an interest in single-board computers (Raspberry Pi) and microcontrollers, but I needed a basic project that I could start off with, so I decided to give this a try. I really want to get into retro computing proper, but it&amp;rsquo;s not a cheap hobby by any means. Instead, I decided to combine these two recent interests as a starter Pi project and build a &amp;ldquo;nostalgia box&amp;rdquo; to relive some level of my early childhood experiences on PC!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>An Unnecessarily Complicated Framework: my blog pipeline</title>
-      <link>http://localhost:1313/posts/posts/an-unnecessarily-complicated-framework/</link>
-      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/posts/an-unnecessarily-complicated-framework/</guid>
-      <description>&lt;p&gt;If you&amp;rsquo;re reading this blog, chances are that you don&amp;rsquo;t realize how complicated things are behind the scenes. What looks like a visually-appealing, easy-to-view blog for my career, home lab and tech opinions is actually several Git(hub) repositories publishing markdown files piped in direct from my primary Obsidian vault.&lt;/p&gt;&#xA;&lt;p&gt;Why did I do it this way, when spinning up something like a WordPress blog would&amp;rsquo;ve been so much simpler and easier?&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Network Nightmare [Troubleshooting Tales #1]</title>
-      <link>http://localhost:1313/posts/posts/network-nightmare---troubleshooting-tales-1/</link>
-      <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/posts/network-nightmare---troubleshooting-tales-1/</guid>
-      <description>&lt;p&gt;In over eight months of using Manjaro Linux as my daily driver, I&amp;rsquo;ve encountered a handful of oddities and issues that I&amp;rsquo;ve had to sink a few hours into fixing. By and large, the experience has been smooth, but when something breaks, it seems to break randomly and without immediately apparent cause. I just dealt with another such situation and figured I would write down what I did to fix the issue as part of a new post series I&amp;rsquo;m starting: &amp;ldquo;Troubleshooting Tales&amp;rdquo;.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Homelab on TenshiNet</title>
+		<link>http://localhost:1313/tags/homelab/</link>
+		<description>Recent content in Homelab on TenshiNet</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 03 Jun 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Running Pi-Hole on old hardware</title>
+				<link>http://localhost:1313/posts/posts/pihole-on-old-hardware/</link>
+				<pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/posts/pihole-on-old-hardware/</guid>
+				<description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;&#xA;&lt;p&gt;When I first started getting into Raspberry Pi and similar technology, it was with an original Pi Model B that was a spare from a family member. I quickly discovered that it would be immensely limited in project potential and I&amp;rsquo;d have to buy more advanced models to do bigger projects (which I did end up buying).&lt;/p&gt;&#xA;&lt;p&gt;At the same time, I knew I wanted to find &lt;strong&gt;some&lt;/strong&gt; use case for this Pi. After I did some research, I learned that installing Pi-Hole would work. Funny enough, I had Pi-Hole as a project idea for a while, as I was researching projects that would be both practical and a good learning experience for security-related fields. As such, it was an easy decision to make that the project for this particular Pi.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>A Raspberry Pi MS-DOS Build</title>
+				<link>http://localhost:1313/posts/posts/pi-msdos-build/</link>
+				<pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/posts/pi-msdos-build/</guid>
+				<description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;&#xA;&lt;p&gt;As a &amp;lsquo;young&amp;rsquo; Millennial, I grew up in the late 90s and early 2000s. Even then, for a variety of reasons, my family often lagged a generation behind on tech. As such, I grew up on late MS-DOS games alongside early Windows games, and due to nostalgia and my growing interest in the fundamental ways computers work, I&amp;rsquo;ve developed a greater interest in retro computers and games.&lt;/p&gt;&#xA;&lt;p&gt;Over the early months of 2026, I also found myself developing an interest in single-board computers (Raspberry Pi) and microcontrollers, but I needed a basic project that I could start off with, so I decided to give this a try. I really want to get into retro computing proper, but it&amp;rsquo;s not a cheap hobby by any means. Instead, I decided to combine these two recent interests as a starter Pi project and build a &amp;ldquo;nostalgia box&amp;rdquo; to relive some level of my early childhood experiences on PC!&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>An Unnecessarily Complicated Framework: my blog pipeline</title>
+				<link>http://localhost:1313/posts/posts/an-unnecessarily-complicated-framework/</link>
+				<pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/posts/an-unnecessarily-complicated-framework/</guid>
+				<description>&lt;p&gt;If you&amp;rsquo;re reading this blog, chances are that you don&amp;rsquo;t realize how complicated things are behind the scenes. What looks like a visually-appealing, easy-to-view blog for my career, home lab and tech opinions is actually several Git(hub) repositories publishing markdown files piped in direct from my primary Obsidian vault.&lt;/p&gt;&#xA;&lt;p&gt;Why did I do it this way, when spinning up something like a WordPress blog would&amp;rsquo;ve been so much simpler and easier?&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Network Nightmare [Troubleshooting Tales #1]</title>
+				<link>http://localhost:1313/posts/posts/network-nightmare---troubleshooting-tales-1/</link>
+				<pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/posts/network-nightmare---troubleshooting-tales-1/</guid>
+				<description>&lt;p&gt;In over eight months of using Manjaro Linux as my daily driver, I&amp;rsquo;ve encountered a handful of oddities and issues that I&amp;rsquo;ve had to sink a few hours into fixing. By and large, the experience has been smooth, but when something breaks, it seems to break randomly and without immediately apparent cause. I just dealt with another such situation and figured I would write down what I did to fix the issue as part of a new post series I&amp;rsquo;m starting: &amp;ldquo;Troubleshooting Tales&amp;rdquo;.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

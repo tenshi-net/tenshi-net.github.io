@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Linux on TenshiNet</title>
-    <link>http://localhost:1313/tags/linux/</link>
-    <description>Recent content in Linux on TenshiNet</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 28 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Network Nightmare [Troubleshooting Tales #1]</title>
-      <link>http://localhost:1313/posts/posts/network-nightmare---troubleshooting-tales-1/</link>
-      <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/posts/network-nightmare---troubleshooting-tales-1/</guid>
-      <description>&lt;p&gt;In over eight months of using Manjaro Linux as my daily driver, I&amp;rsquo;ve encountered a handful of oddities and issues that I&amp;rsquo;ve had to sink a few hours into fixing. By and large, the experience has been smooth, but when something breaks, it seems to break randomly and without immediately apparent cause. I just dealt with another such situation and figured I would write down what I did to fix the issue as part of a new post series I&amp;rsquo;m starting: &amp;ldquo;Troubleshooting Tales&amp;rdquo;.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Linux on TenshiNet</title>
+		<link>http://localhost:1313/tags/linux/</link>
+		<description>Recent content in Linux on TenshiNet</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 29 Jun 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Linux, Eight Months Hence: Reflections on Daily Driving</title>
+				<link>http://localhost:1313/posts/posts/reflections-on-daily-driving-linux/</link>
+				<pubDate>Mon, 29 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/posts/reflections-on-daily-driving-linux/</guid>
+				<description>&lt;p&gt;Back in mid October of last year (2025), I made the decision to switch to Linux. This switch was a long time coming, even though I only realized in the last two years that I&amp;rsquo;d be able to make the switch. I&amp;rsquo;ve talked about my experiences with this migration in &lt;a href=&#34;https://tenshi-net.github.io/posts/posts/navigating-linux-distros---my-personal-journey/&#34;&gt;previous posts&lt;/a&gt;, including the very &lt;a href=&#34;https://tenshi-net.github.io/posts/posts/frustrations-humblings-and-revelations---a-second-beginning-on-linux/&#34;&gt;rough start&lt;/a&gt; I had. However, after a few weeks of adjustment and changing up my workflow, I&amp;rsquo;d like to jot down some thoughts I have in hopes of maybe helping other people realize that Linux is viable for most people in this day and age.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Network Nightmare [Troubleshooting Tales #1]</title>
+				<link>http://localhost:1313/posts/posts/network-nightmare---troubleshooting-tales-1/</link>
+				<pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/posts/network-nightmare---troubleshooting-tales-1/</guid>
+				<description>&lt;p&gt;In over eight months of using Manjaro Linux as my daily driver, I&amp;rsquo;ve encountered a handful of oddities and issues that I&amp;rsquo;ve had to sink a few hours into fixing. By and large, the experience has been smooth, but when something breaks, it seems to break randomly and without immediately apparent cause. I just dealt with another such situation and figured I would write down what I did to fix the issue as part of a new post series I&amp;rsquo;m starting: &amp;ldquo;Troubleshooting Tales&amp;rdquo;.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>
