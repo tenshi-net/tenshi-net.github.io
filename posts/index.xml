@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Mon, 29 Jun 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Fall Back, Fall Back! (A Slight Pivot)</title>
+				<link>http://localhost:1313/posts/posts/a-slight-career-pivot/</link>
+				<pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/posts/a-slight-career-pivot/</guid>
+				<description>&lt;p&gt;I have a confession to make: I haven&amp;rsquo;t been feeling very good about my career path for a while now. Despite my intentions to use a traditional IT route to get into a semi-traditional sector of cybersecurity, I was really &lt;strong&gt;not&lt;/strong&gt; enjoying the idea of working helpdesk. Beyond that, I wasn&amp;rsquo;t very confident that I&amp;rsquo;d ever make it to what I actually wanted to do.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve never enjoyed social interactions with strangers; I can do it, I&amp;rsquo;m not socially inept, but it&amp;rsquo;s certainly not my favorite thing to do. Tie to that the fact that I&amp;rsquo;ve obviously heard all the horror stories from helpdesk employees dealing with difficult customers and spiking their stress levels in the process, which is something I certainly don&amp;rsquo;t need more of.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Linux, Eight Months Hence: Reflections on Daily Driving</title>
 				<link>http://localhost:1313/posts/posts/reflections-on-daily-driving-linux/</link>

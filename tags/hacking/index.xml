@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Career on TenshiNet</title>
-		<link>http://localhost:1313/tags/career/</link>
-		<description>Recent content in Career on TenshiNet</description>
+		<title>Hacking on TenshiNet</title>
+		<link>http://localhost:1313/tags/hacking/</link>
+		<description>Recent content in Hacking on TenshiNet</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
 		
@@ -12,20 +12,13 @@
 		
 			<lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/career/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/hacking/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Fall Back, Fall Back! (A Slight Pivot)</title>
 				<link>http://localhost:1313/posts/posts/a-slight-career-pivot/</link>
 				<pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/posts/posts/a-slight-career-pivot/</guid>
 				<description>&lt;p&gt;I have a confession to make: I haven&amp;rsquo;t been feeling very good about my career path for a while now. Despite my intentions to use a traditional IT route to get into a semi-traditional sector of cybersecurity, I was really &lt;strong&gt;not&lt;/strong&gt; enjoying the idea of working helpdesk. Beyond that, I wasn&amp;rsquo;t very confident that I&amp;rsquo;d ever make it to what I actually wanted to do.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve never enjoyed social interactions with strangers; I can do it, I&amp;rsquo;m not socially inept, but it&amp;rsquo;s certainly not my favorite thing to do. Tie to that the fact that I&amp;rsquo;ve obviously heard all the horror stories from helpdesk employees dealing with difficult customers and spiking their stress levels in the process, which is something I certainly don&amp;rsquo;t need more of.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>An Unnecessarily Complicated Framework: my blog pipeline</title>
-				<link>http://localhost:1313/posts/posts/an-unnecessarily-complicated-framework/</link>
-				<pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/posts/an-unnecessarily-complicated-framework/</guid>
-				<description>&lt;p&gt;If you&amp;rsquo;re reading this blog, chances are that you don&amp;rsquo;t realize how complicated things are behind the scenes. What looks like a visually-appealing, easy-to-view blog for my career, home lab and tech opinions is actually several Git(hub) repositories publishing markdown files piped in direct from my primary Obsidian vault.&lt;/p&gt;&#xA;&lt;p&gt;Why did I do it this way, when spinning up something like a WordPress blog would&amp;rsquo;ve been so much simpler and easier?&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
