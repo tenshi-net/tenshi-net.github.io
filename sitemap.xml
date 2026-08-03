@@ -2,6 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/cybersecurity/</loc>
+    <lastmod>2026-08-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/tags/cybersecurity/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/hacking/</loc>
+    <lastmod>2026-08-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/tags/hacking/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-08-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/posts/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-08-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/tags/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-08-03T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/posts/hackerholidays2026-the-concierge/</loc>
+    <lastmod>2026-08-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/posts/posts/hackerholidays2026-the-concierge/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/tryhackme/</loc>
+    <lastmod>2026-08-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/tags/tryhackme/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/writeup/</loc>
+    <lastmod>2026-08-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/tags/writeup/"/>
+  </url>
+  <url>
     <loc>http://localhost:1313/tags/arduino/</loc>
     <lastmod>2026-07-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -22,16 +102,6 @@
                href="http://localhost:1313/tags/career/"/>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/cybersecurity/</loc>
-    <lastmod>2026-07-09T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link
-               rel="alternate"
-               hreflang="en"
-               href="http://localhost:1313/tags/cybersecurity/"/>
-  </url>
-  <url>
     <loc>http://localhost:1313/posts/posts/a-slight-career-pivot/</loc>
     <lastmod>2026-07-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -42,26 +112,6 @@
                href="http://localhost:1313/posts/posts/a-slight-career-pivot/"/>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/hacking/</loc>
-    <lastmod>2026-07-09T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link
-               rel="alternate"
-               hreflang="en"
-               href="http://localhost:1313/tags/hacking/"/>
-  </url>
-  <url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-07-09T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-               rel="alternate"
-               hreflang="en"
-               href="http://localhost:1313/posts/"/>
-  </url>
-  <url>
     <loc>http://localhost:1313/tags/raspberrypi/</loc>
     <lastmod>2026-07-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -70,26 +120,6 @@
                rel="alternate"
                hreflang="en"
                href="http://localhost:1313/tags/raspberrypi/"/>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-07-09T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link
-               rel="alternate"
-               hreflang="en"
-               href="http://localhost:1313/tags/"/>
-  </url>
-  <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-07-09T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link
-               rel="alternate"
-               hreflang="en"
-               href="http://localhost:1313/"/>
   </url>
   <url>
     <loc>http://localhost:1313/tags/learning/</loc>

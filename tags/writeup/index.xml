@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Cybersecurity on TenshiNet</title>
-		<link>http://localhost:1313/tags/cybersecurity/</link>
-		<description>Recent content in Cybersecurity on TenshiNet</description>
+		<title>Writeup on TenshiNet</title>
+		<link>http://localhost:1313/tags/writeup/</link>
+		<description>Recent content in Writeup on TenshiNet</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
 		
@@ -12,20 +12,13 @@
 		
 			<lastBuildDate>Mon, 03 Aug 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/cybersecurity/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/writeup/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>The Concierge [Write-Up]</title>
 				<link>http://localhost:1313/posts/posts/hackerholidays2026-the-concierge/</link>
 				<pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/posts/posts/hackerholidays2026-the-concierge/</guid>
 				<description>&lt;p&gt;The Concierge is the first room of the TryHackMe CTF challenge, &lt;em&gt;&lt;a href=&#34;https://tryhackme.com/hackerholidays&#34;&gt;Hacker Holidays 2026&lt;/a&gt;&lt;/em&gt;. In this write-up, I&amp;rsquo;ll walk you through how I obtained the flag. No direct answers are given and my approach may not be the only or even the &lt;strong&gt;best&lt;/strong&gt; approach.&lt;/p&gt;&#xA;&lt;h1 id=&#34;premise&#34;&gt;Premise&lt;/h1&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;blockquote class=&#34;blockquote-regular&#34;&gt;&#xA;  &lt;p&gt;&lt;strong&gt;The WiFi is open. Everything here is complimentary, including access to things you were never meant to find&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Over 14 days, move through the resort one room at a time. The guests are hiding something. The staff is hiding something. And VERA, the AI concierge, knows absolutely everything&amp;hellip;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Fall Back, Fall Back! (A Slight Pivot)</title>
-				<link>http://localhost:1313/posts/posts/a-slight-career-pivot/</link>
-				<pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/posts/a-slight-career-pivot/</guid>
-				<description>&lt;p&gt;I have a confession to make: I haven&amp;rsquo;t been feeling very good about my career path for a while now. Despite my intentions to use a traditional IT route to get into a semi-traditional sector of cybersecurity, I was really &lt;strong&gt;not&lt;/strong&gt; enjoying the idea of working helpdesk. Beyond that, I wasn&amp;rsquo;t very confident that I&amp;rsquo;d ever make it to what I actually wanted to do.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve never enjoyed social interactions with strangers; I can do it, I&amp;rsquo;m not socially inept, but it&amp;rsquo;s certainly not my favorite thing to do. Tie to that the fact that I&amp;rsquo;ve obviously heard all the horror stories from helpdesk employees dealing with difficult customers and spiking their stress levels in the process, which is something I certainly don&amp;rsquo;t need more of.&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>

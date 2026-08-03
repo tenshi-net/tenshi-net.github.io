@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Mon, 03 Aug 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>The Concierge [Write-Up]</title>
+				<link>http://localhost:1313/posts/posts/hackerholidays2026-the-concierge/</link>
+				<pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/posts/hackerholidays2026-the-concierge/</guid>
+				<description>&lt;p&gt;The Concierge is the first room of the TryHackMe CTF challenge, &lt;em&gt;&lt;a href=&#34;https://tryhackme.com/hackerholidays&#34;&gt;Hacker Holidays 2026&lt;/a&gt;&lt;/em&gt;. In this write-up, I&amp;rsquo;ll walk you through how I obtained the flag. No direct answers are given and my approach may not be the only or even the &lt;strong&gt;best&lt;/strong&gt; approach.&lt;/p&gt;&#xA;&lt;h1 id=&#34;premise&#34;&gt;Premise&lt;/h1&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;blockquote class=&#34;blockquote-regular&#34;&gt;&#xA;  &lt;p&gt;&lt;strong&gt;The WiFi is open. Everything here is complimentary, including access to things you were never meant to find&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Over 14 days, move through the resort one room at a time. The guests are hiding something. The staff is hiding something. And VERA, the AI concierge, knows absolutely everything&amp;hellip;&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Fall Back, Fall Back! (A Slight Pivot)</title>
 				<link>http://localhost:1313/posts/posts/a-slight-career-pivot/</link>
