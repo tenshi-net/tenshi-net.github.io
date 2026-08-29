@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Mon, 03 Aug 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Sat, 29 Aug 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/tags/hacking/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Corridor: Quick IDOR Challenge [Write-up]</title>
+				<link>http://localhost:1313/posts/posts/corridor-idor-writeup/</link>
+				<pubDate>Sat, 29 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/posts/corridor-idor-writeup/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Corridor&lt;/strong&gt; is a &amp;ldquo;five-minute hack&amp;rdquo; on &lt;a href=&#34;https://tryhackme.com/room/corridor&#34;&gt;TryHackMe&lt;/a&gt;, intended to showcase a quick example of &lt;strong&gt;Insecure Direct Object Reference (IDOR)&lt;/strong&gt;, which is a prevalent web-based threat that can be overlooked when designing secure websites and web applications.&lt;/p&gt;&#xA;&lt;h1 id=&#34;premise&#34;&gt;Premise&lt;/h1&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;blockquote class=&#34;blockquote-regular&#34;&gt;&#xA;  &lt;p&gt;You have found yourself in a strange corridor. Can you find your way back to where you came?&lt;/p&gt;&#xA;&lt;p&gt;In this challenge, you will explore potential IDOR vulnerabilities. Examine the URL endpoints you access as you navigate the website and note the hexadecimal values you find (they look an awful lot like a &lt;em&gt;hash&lt;/em&gt;, don&amp;rsquo;t they?). This could help you uncover website locations you were not expected to access.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>The Concierge [Write-Up]</title>
 				<link>http://localhost:1313/posts/posts/hackerholidays2026-the-concierge/</link>

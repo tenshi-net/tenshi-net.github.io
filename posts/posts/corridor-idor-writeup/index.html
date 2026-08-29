@@ -21,41 +21,41 @@
   
   window.MANA_LANG_PREFIXES = ['en'];
 </script>
-<title>An Unnecessarily Complicated Framework: my blog pipeline | TenshiNet</title>
+<title>Corridor: Quick IDOR Challenge [Write-up] | TenshiNet</title>
 <meta
   name="description"
   content="
-    If you&rsquo;re reading this blog, chances are that you don&rsquo;t realize how complicated things are behind the scenes. What looks like a visually-appealing, …
+    Corridor is a &ldquo;five-minute hack&rdquo; on TryHackMe, intended to showcase a quick example of Insecure Direct Object Reference (IDOR), which is a prevalent …
   
   ">
 
 
-  <meta name="keywords" content="blogging, homelab, career, learning">
+  <meta name="keywords" content="cybersecurity, hacking, tryhackme, writeup">
 
 
 
 
 
-<link rel="canonical" href="http://localhost:1313/posts/posts/an-unnecessarily-complicated-framework/">
+<link rel="canonical" href="http://localhost:1313/posts/posts/corridor-idor-writeup/">
 
 
-<link rel="alternate" hreflang="en-us" href="http://localhost:1313/posts/posts/an-unnecessarily-complicated-framework/"><link rel="alternate" hreflang="x-default" href="http://localhost:1313/posts/posts/an-unnecessarily-complicated-framework/">
+<link rel="alternate" hreflang="en-us" href="http://localhost:1313/posts/posts/corridor-idor-writeup/"><link rel="alternate" hreflang="x-default" href="http://localhost:1313/posts/posts/corridor-idor-writeup/">
 
 
 <meta name="robots" content="index, follow">
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_us">
-<meta property="og:title" content="An Unnecessarily Complicated Framework: my blog pipeline | TenshiNet">
-<meta property="og:description" content="If you&rsquo;re reading this blog, chances are that you don&rsquo;t realize how complicated things are behind the scenes. What looks like a visually-appealing, …">
-<meta property="og:url" content="http://localhost:1313/posts/posts/an-unnecessarily-complicated-framework/">
-<meta property="og:site_name" content="TenshiNet"><meta property="article:published_time" content="2026-05-29T00:00:00Z">
+<meta property="og:title" content="Corridor: Quick IDOR Challenge [Write-up] | TenshiNet">
+<meta property="og:description" content="Corridor is a &ldquo;five-minute hack&rdquo; on TryHackMe, intended to showcase a quick example of Insecure Direct Object Reference (IDOR), which is a prevalent …">
+<meta property="og:url" content="http://localhost:1313/posts/posts/corridor-idor-writeup/">
+<meta property="og:site_name" content="TenshiNet"><meta property="article:published_time" content="2026-08-29T00:00:00Z">
   <meta
     property="article:modified_time"
-    content="2026-05-29T00:00:00Z"><meta property="article:section" content="blogging"><meta property="article:tag" content="blogging"><meta property="article:tag" content="homelab"><meta property="article:tag" content="career"><meta property="article:tag" content="learning">
+    content="2026-08-29T00:00:00Z"><meta property="article:section" content="cybersecurity"><meta property="article:tag" content="cybersecurity"><meta property="article:tag" content="hacking"><meta property="article:tag" content="tryhackme"><meta property="article:tag" content="writeup">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="An Unnecessarily Complicated Framework: my blog pipeline | TenshiNet">
-<meta name="twitter:description" content="If you&rsquo;re reading this blog, chances are that you don&rsquo;t realize how complicated things are behind the scenes. What looks like a visually-appealing, …">
+<meta name="twitter:title" content="Corridor: Quick IDOR Challenge [Write-up] | TenshiNet">
+<meta name="twitter:description" content="Corridor is a &ldquo;five-minute hack&rdquo; on TryHackMe, intended to showcase a quick example of Insecure Direct Object Reference (IDOR), which is a prevalent …">
 
 
 
@@ -80,7 +80,7 @@
 
   
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","email":"tenshinet@proton.me","name":"TenshiNet","sameAs":["https://github.com/tenshi-net"]},"dateModified":"2026-05-29T00:00:00Z","datePublished":"2026-05-29T00:00:00Z","description":"If you\u0026rsquo;re reading this blog, chances are that you don\u0026rsquo;t realize how complicated things are behind the scenes. What looks like a visually-appealing, …","headline":"An Unnecessarily Complicated Framework: my blog pipeline","image":"http://localhost:1313/images/transparent-logo.png","inLanguage":"en-us","keywords":["blogging","homelab","career","learning"],"mainEntityOfPage":{"@id":"http://localhost:1313/posts/posts/an-unnecessarily-complicated-framework/","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:1313/images/transparent-logo.png"},"name":"TenshiNet","url":"http://localhost:1313/"},"timeRequired":"PT6M","url":"http://localhost:1313/posts/posts/an-unnecessarily-complicated-framework/","wordCount":1219}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","email":"tenshinet@proton.me","name":"TenshiNet","sameAs":["https://github.com/tenshi-net"]},"dateModified":"2026-08-29T00:00:00Z","datePublished":"2026-08-29T00:00:00Z","description":"Corridor is a \u0026ldquo;five-minute hack\u0026rdquo; on TryHackMe, intended to showcase a quick example of Insecure Direct Object Reference (IDOR), which is a prevalent …","headline":"Corridor: Quick IDOR Challenge [Write-up]","image":"http://localhost:1313/images/transparent-logo.png","inLanguage":"en-us","keywords":["cybersecurity","hacking","tryhackme","writeup"],"mainEntityOfPage":{"@id":"http://localhost:1313/posts/posts/corridor-idor-writeup/","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:1313/images/transparent-logo.png"},"name":"TenshiNet","url":"http://localhost:1313/"},"timeRequired":"PT4M","url":"http://localhost:1313/posts/posts/corridor-idor-writeup/","wordCount":689}</script>
 
 
 
@@ -90,7 +90,7 @@
     
   
   
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Home","position":1},{"@type":"ListItem","item":"http://localhost:1313/posts/","name":"Posts","position":2},{"@type":"ListItem","item":"http://localhost:1313/posts/posts/an-unnecessarily-complicated-framework/","name":"An Unnecessarily Complicated Framework: my blog pipeline","position":3}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Home","position":1},{"@type":"ListItem","item":"http://localhost:1313/posts/","name":"Posts","position":2},{"@type":"ListItem","item":"http://localhost:1313/posts/posts/corridor-idor-writeup/","name":"Corridor: Quick IDOR Challenge [Write-up]","position":3}]}</script>
 
 
 
@@ -325,20 +325,20 @@
     </li>
     
     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <span itemprop="name" class="breadcrumb-current">An Unnecessarily Complicated Framework: my blog pipeline</span>
+      <span itemprop="name" class="breadcrumb-current">Corridor: Quick IDOR Challenge [Write-up]</span>
       <meta itemprop="position" content="3" />
     </li>
   </ol>
 </nav>
 
 
-        <h1 class="post-title-main">An Unnecessarily Complicated Framework: my blog pipeline</h1>
+        <h1 class="post-title-main">Corridor: Quick IDOR Challenge [Write-up]</h1>
 
         
 
         <div class="post-meta">
   <div class="post-meta-info">
-    <time datetime="2026-05-29T00:00:00Z" class="post-date">
+    <time datetime="2026-08-29T00:00:00Z" class="post-date">
       <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path
           stroke-linecap="round"
@@ -346,7 +346,7 @@
           stroke-width="2"
           d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
       </svg>
-      May 29, 2026
+      August 29, 2026
     </time>
 
     <span class="meta-separator">•</span>
@@ -360,7 +360,7 @@
             stroke-width="2"
             d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
         </svg>
-        1219 words
+        689 words
       </span>
     
 
@@ -374,7 +374,7 @@
             stroke-width="2"
             d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>
-        6 min
+        4 min
       </span>
     
   </div>
@@ -382,13 +382,13 @@
   
     <div class="post-tags">
       
-        <a href="/tags/blogging" class="post-tag">blogging</a>
+        <a href="/tags/cybersecurity" class="post-tag">cybersecurity</a>
       
-        <a href="/tags/homelab" class="post-tag">homelab</a>
+        <a href="/tags/hacking" class="post-tag">hacking</a>
       
-        <a href="/tags/career" class="post-tag">career</a>
+        <a href="/tags/tryhackme" class="post-tag">tryhackme</a>
       
-        <a href="/tags/learning" class="post-tag">learning</a>
+        <a href="/tags/writeup" class="post-tag">writeup</a>
       
     </div>
   
@@ -397,28 +397,43 @@
       </header>
 
       <div class="post-content-main">
-        <p>If you&rsquo;re reading this blog, chances are that you don&rsquo;t realize how complicated things are behind the scenes. What looks like a visually-appealing, easy-to-view blog for my career, home lab and tech opinions is actually several Git(hub) repositories publishing markdown files piped in direct from my primary Obsidian vault.</p>
-<p>Why did I do it this way, when spinning up something like a WordPress blog would&rsquo;ve been so much simpler and easier?</p>
-<h1 id="backstory">Backstory</h1>
-<p>I first discovered the idea of a blog pipeline going from Obsidian to a Hugo blog because of one of my favorite tech content creators, NetworkChuck. In <a href="https://www.youtube.com/watch?v=dnE7c0ELEH8">his video</a>, he runs through his own blog pipeline. He set it up with a Python script that takes notes from a dedicated folder in his Obsidian vault, syncs them into his Hugo blog repository, then Hugo turns those markdown files and converts them into posts on the blog. The blog is then pushed to an external hosting provider.</p>
-<p>I wasn&rsquo;t interested in the last step. I don&rsquo;t have a whole lot of money to spare at the moment and paying for a third-party host seemed like an unnecessary step when <a href="https://www.youtube.com/watch?v=5XhxR9Vs6zc">GitHub Pages</a> exists for free without any sort of annoying freemium limitations.</p>
-<p>Little did I know that was a bit more complicated than I originally realized. Back in November 2025, I tried following Chuck&rsquo;s video, just stopping shy of the part where it pushes the blog to the external provider. Unfortunately for me, several hours of working on getting things set up ended up being a waste of time because, for the life of me, I could not get the site to publish to GitHub Pages. It tried once, but failed the moment I tried to further edit the site (and I wasn&rsquo;t doing anything extreme, just text editing).</p>
-<p>That level of miserable, time-wasting failure was too much for me at that point in time, as I was dealing with particularly strong discouragement from my career woes that made me come very close to giving up on the whole tech career journey I&rsquo;ve been trying to walk.</p>
-<h1 id="another-go">Another go</h1>
-<p>Because of that discouragement, I shelved this project for a few months. Once I had gotten to a better state of mind, I decided to return to it in late April of this year (2026). This time, I followed a <a href="https://www.youtube.com/watch?v=LIFvgrRxdt4">different guide</a> that was specifically made for hosting a Hugo site through GitHub Pages. I then blended the steps from Chuck&rsquo;s video for syncing my Obsidian notes to the blog so that I could still maintain that all-in-one organization of using Obsidian for the blog rather than having to copy-paste things.</p>
-<p>I didn&rsquo;t go the route of using a Python script for automation like Chuck did. I <em>might</em> consider doing that at some point but for now, I have things working as intended and I don&rsquo;t want to mess around with it too much without better learning why the original attempt failed so much.</p>
-<h1 id="start-to-finish">Start to finish</h1>
-<p>My workflow goes like this.</p>
-<p>I have an Obsidian vault titled <strong>TenshiNet HQ</strong>. I treat this vault like an information headquarters, thus the name. In this vault, I hold a majority of my written content, from blog posts to project brainstorming to home lab documentation and so forth. In the <strong>Blog Desktop</strong> folder, I organize my posts by year and month, with a separate folder for different drafts. I write each post using markdown, ensuring that the beginning of each post has appropriate metadata in order to list the correct date, a more detailed title, tags, etc.</p>
-<p>I also have a completely separate folder apart from <strong>Blog Desktop</strong> called &ldquo;posts&rdquo; (the only lower-case folder in the vault). That&rsquo;s where I place posts that are meant to be published to the blog. When I finish a post in the <strong>Drafts</strong> subfolder, I clone it within Obsidian and move it over to the &ldquo;posts&rdquo; folder.</p>
-<p>From there, I use rsync to sync that folder with the appropriate folder within my Hugo local Git repository. Once the sync is finished, I then navigate my terminal over to the root directory of said repository and I add and commit the change to the local repository. Following that, I run the <code>hugo server</code> command to proofread and view the post in a live-like setting.</p>
-<p>From there, the content has to be uploaded to GitHub. First off, there are actually <em>two</em> GitHub repositories related to the blog: one simply titled <strong>blog</strong> and the other is titled <strong>tenshi-net.github.io</strong>, the proper formatting for a GitHub Pages repository. The <strong>blog</strong> repository stores the code locally on my system, while <strong>tenshi-net.github.io</strong> is where the blog is deployed to. This is done through usage of a Git submodule which functions as a reference back to the <strong>blog</strong> local repository. In other words, the files from the local <strong>blog</strong> repository will publish under the <strong>tenshi-net.github.io</strong> repository on GitHub proper without any added effort.</p>
-<p>I actually use GitHub Desktop to manage all of my GitHub repos. I do know the basics of how to use GitHub within the terminal but I&rsquo;m still quite new to Git and GitHub, so the the desktop application makes it way easier to manage and understand what&rsquo;s going on. Once I&rsquo;ve checked the new post with the <code>hugo server</code> command, I go into GitHub Desktop and I push the updated blog to the <strong>tenshi-net.github.io</strong> repository.</p>
-<p>From there, it&rsquo;s just a matter of waiting for GitHub to build and deploy the site accordingly!</p>
-<h1 id="why-the-complications">Why the complications?</h1>
-<p>I swear I didn&rsquo;t do this because I enjoy complications or stress. Quite the opposite, in fact. No, I did things this way because I wanted to push myself. I liked the <em>concept</em> of this project, and I wanted to see if I could do it properly. Before, I did actually use WordPress as my blog host, but its freemium restrictions were irritating and it just felt like it was a lot more than I needed for just hosting a basic blog for discussing my home lab, career and tech opinions. By going this route, I would be pushing myself to better learn Git(Hub) and Hugo. I&rsquo;m still pretty green with both, I&rsquo;m not confident I could break out of the current setup without a lot more learning, but it&rsquo;s a start.</p>
-<p>Not only this but eventually, I can use the blog as literal proof of ability. I can consider it a technical project if it would be beneficial to talk about it with future job applications. I also think that doing things this way tells people that I&rsquo;m not a poser: I may not be amazing at anything specific, but I do my research, I learn new things, and any time I &lsquo;give up&rsquo;, it&rsquo;s merely a temporary tactical retreat until I can return with a better mindset and a new frame of mind.</p>
-<p>Do I recommend most people go this route? Not really. Unless you are patient, know how to fill in the gaps on guides/walkthroughs, and want something technical to point to on a resume, you probably would have it better using a website builder tool such as WordPress or Weebly instead. But for those who decide to try this project, it can truly be a learning experience that gives you a space to get your thoughts and project documentation into the world!</p>
+        <p><strong>Corridor</strong> is a &ldquo;five-minute hack&rdquo; on <a href="https://tryhackme.com/room/corridor">TryHackMe</a>, intended to showcase a quick example of <strong>Insecure Direct Object Reference (IDOR)</strong>, which is a prevalent web-based threat that can be overlooked when designing secure websites and web applications.</p>
+<h1 id="premise">Premise</h1>
+
+
+
+
+
+
+
+
+<blockquote class="blockquote-regular">
+  <p>You have found yourself in a strange corridor. Can you find your way back to where you came?</p>
+<p>In this challenge, you will explore potential IDOR vulnerabilities. Examine the URL endpoints you access as you navigate the website and note the hexadecimal values you find (they look an awful lot like a <em>hash</em>, don&rsquo;t they?). This could help you uncover website locations you were not expected to access.</p>
+
+</blockquote>
+<h1 id="enumeration">Enumeration</h1>
+<p>First off, the premise gives us a very good clue as to what to look for. When you load into the AttackBox, I usually start by running an Nmap scan, <code>nmap -sC -sV -oN nmap/init [IP]</code>, though that&rsquo;s not always the best scan to run at the start. That scan is included in my <a href="https://github.com/tenshi-net/nm-timesaver">nm-timesaver</a> repository of Nmap shell scripts, if you&rsquo;re using your own virtual machine instead of the AttackBox, if you wanted to save a little time in the long run.</p>
+<p>In this case, Nmap doesn&rsquo;t really tell us anything necessary that isn&rsquo;t already specified in the premise. As an IDOR challenge, it is strictly web-based and you don&rsquo;t need to do any sort of lateral movement.</p>
+<p>As such, navigate to <code>http://[LAB_IP]</code> and you&rsquo;ll be greeted by an image of a set of doors. Remember what the premise tells us: &ldquo;note the hexadecimal values&rdquo; and &ldquo;they look an awful lot like a <em>hash</em>&rdquo;.</p>
+<p>If you mouse over each of the doors, you&rsquo;ll notice that every one of them has a unique URL that takes you to a blank &ldquo;room&rdquo;. The URLs are seemingly random hexadecimal values. If you&rsquo;ve been learning cybersecurity for any amount of time, you <em>should</em> recognize that they look like MD5 hashes. However, if you find a hash you don&rsquo;t recognize, you could always use a tool like Hashes.com&rsquo;s Hash Type Identifier or something similar.</p>
+<p>You&rsquo;ll find that these are MD5 hashes, indeed. Next, you&rsquo;ll want to crack these hashes to see what they contain. You can use a tool such as CrackStation for quick, web-based cracking of hashes. Upon cracking them, you&rsquo;ll notice that they&rsquo;re all individual integers from 1-13. Logically, these probably coincide with &ldquo;door&rdquo; numbers, taking you to the different rooms. As I said earlier, they&rsquo;re all empty if you click on them from the home page, so what do we do?</p>
+<p>My first instinct was to take a look at each page&rsquo;s source code but after a quick look through a few pages, I noticed no noticeable differences, so I went back to the hashes themselves. Maybe there&rsquo;s a door that&rsquo;s missing from the home page?</p>
+<h1 id="exploitation">Exploitation</h1>
+<p>If the numbers were 1-13, <em>what if I hashed 14 and pasted that into the URL bar after the HTTP with the IP address?</em></p>
+<p>I used the MD5 Hash Generator tool from Dan&rsquo;s Tools to hash these numbers. Starting with 14, I got an error, nothing was found for that &ldquo;door&rdquo;. You could repeat the process for a few more numbers, but no matter whether you go to 15 or 20 or higher, you&rsquo;ll continue to be greeted by missing pages.</p>
+<p>Remembering the note on hexadecimal and the fact that computers start counting from 0, I decided to try this process with the hash of 0.</p>
+<p>Lo and behold, hashing 0 and pasting it into the URL reveals the challenge flag. It&rsquo;s in the format of <code>FLAG{...}</code>, rather than TryHackMe&rsquo;s usual <code>THM{...}</code>.</p>
+<h1 id="summary">Summary</h1>
+<p>This challenge is deceptively simple. What I learned from this is that if you don&rsquo;t properly require authentication for sensitive data on a web page/application, someone might be able to exploit that to access web pages meant only for specific users.</p>
+<p>I also realized after the fact that I could potentially have used a tool like Gobuster to brute-force find the page containing the flag, but considering how the premise mentioned hashes, this route was a matter of initial instinct.</p>
+<h1 id="resources">Resources</h1>
+<ul>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html">OWASP Cheat Sheet on IDOR</a></li>
+<li><a href="https://hashes.com/en/tools/hash_identifier">Hash Type Identifier (Hashes.com)</a></li>
+<li><a href="https://crackstation.net/">CrackStation</a></li>
+<li><a href="https://www.md5hashgenerator.com/">MD5 Hash Generator</a></li>
+</ul>
 
       </div>
 
@@ -427,13 +442,13 @@
           <div class="post-tags-footer">
             <span class="tags-label">Tags:</span>
             
-              <a href="/tags/blogging" class="post-tag">blogging</a>
+              <a href="/tags/cybersecurity" class="post-tag">cybersecurity</a>
             
-              <a href="/tags/homelab" class="post-tag">homelab</a>
+              <a href="/tags/hacking" class="post-tag">hacking</a>
             
-              <a href="/tags/career" class="post-tag">career</a>
+              <a href="/tags/tryhackme" class="post-tag">tryhackme</a>
             
-              <a href="/tags/learning" class="post-tag">learning</a>
+              <a href="/tags/writeup" class="post-tag">writeup</a>
             
           </div>
         </footer>
@@ -447,9 +462,16 @@
   <ul class="related-posts-list">
     
     <li class="related-post-item">
-      <a href="/posts/posts/network-nightmare---troubleshooting-tales-1/" class="related-post-link">
-        <strong>Network Nightmare [Troubleshooting Tales #1]</strong>
-        <span>In over eight months of using Manjaro Linux as my daily driver, I&rsquo;ve encountered a handful of oddities and issues …</span>
+      <a href="/posts/posts/hackerholidays2026-the-concierge/" class="related-post-link">
+        <strong>The Concierge [Write-Up]</strong>
+        <span>The Concierge is the first room of the TryHackMe CTF challenge, Hacker Holidays 2026. In this write-up, I&rsquo;ll walk …</span>
+      </a>
+    </li>
+    
+    <li class="related-post-item">
+      <a href="/posts/posts/a-slight-career-pivot/" class="related-post-link">
+        <strong>Fall Back, Fall Back! (A Slight Pivot)</strong>
+        <span>I have a confession to make: I haven&rsquo;t been feeling very good about my career path for a while now. Despite my …</span>
       </a>
     </li>
     
@@ -461,22 +483,14 @@
       <nav class="post-navigation" aria-label="Post navigation">
         
           <a
-            href="/posts/posts/network-nightmare---troubleshooting-tales-1/"
+            href="/posts/posts/hackerholidays2026-the-concierge/"
             class="nav-link nav-prev"
-            aria-label="Previous post: Network Nightmare [Troubleshooting Tales #1]">
+            aria-label="Previous post: The Concierge [Write-Up]">
             <span class="nav-label">Previous</span>
-            <span class="nav-title">Network Nightmare [Troubleshooting Tales #1]</span>
+            <span class="nav-title">The Concierge [Write-Up]</span>
           </a>
         
 
-        
-          <a
-            href="/posts/posts/pi-msdos-build/"
-            class="nav-link nav-next"
-            aria-label="Next post: A Raspberry Pi MS-DOS Build">
-            <span class="nav-label">Next</span>
-            <span class="nav-title">A Raspberry Pi MS-DOS Build</span>
-          </a>
         
       </nav>
     </article>
@@ -519,10 +533,11 @@
       <nav class="toc-nav" aria-label="Table of Contents">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#backstory">Backstory</a></li>
-    <li><a href="#another-go">Another go</a></li>
-    <li><a href="#start-to-finish">Start to finish</a></li>
-    <li><a href="#why-the-complications">Why the complications?</a></li>
+    <li><a href="#premise">Premise</a></li>
+    <li><a href="#enumeration">Enumeration</a></li>
+    <li><a href="#exploitation">Exploitation</a></li>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#resources">Resources</a></li>
   </ul>
 </nav>
       </nav>
